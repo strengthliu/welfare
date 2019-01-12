@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+  <title>加油卡管理</title>
+	<script>
+		function changeKeeper(buttonid,keeperName1){
+			var tx = document.getElementById(buttonid);
+			if(tx.value == "改人") {
+				tx.value = "确定";
+			} else {
+				tx.value = "改人";
+
+			}
+			alert(tx.value);
+		}
+	</script>
+</head>
+
+<body>
+		<div class="header">
+			<span>加油卡管理</span>
+			<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
+		</div>
+		<div class="banner">
+			<img src="img/self-report.png">
+		</div>
+
+		<div class="contain">
+			<ul class="dorm-book">
+				<li class="state-box">
+					<span class="state-img"><img src="img/state.png"></span>
+					<span class="state"><a href="fuelCardRecive-organization.html">领取加油卡</a></span>
+				</li>
+    	</ul>
+
+		</div>
+		<ul class="dorm-book mt3">
+		</ul>
+		<ul class="dorm-book mt3">
+			<li class="cost clearfix first">
+				<span>卡号</span>
+				<span>签收人</span>
+				<span>送达情况</span>
+			</li>
+			<li class="cost clearfix">
+				<span>878701839291</span>
+				<span id="keeperName1">未送达 </span>
+				<span>
+					<div>
+					<button><a href="fuelCardRecive-student-searchOrganization.html">送达签收</a></button>
+					</div>
+				</span>
+			</li>
+			<li class="cost clearfix">
+				<span>878701839291</span>
+				<span id="keeperName2">李四</span>
+				<span>贵阳市质监局</span>
+			</li>
+			<li class="cost clearfix">
+				<span>878701839291</span>
+				<span id="keeperName3">张三</span>
+				<span>贵阳市质监局</span>
+			</li>
+		</ul>
+	  <script src="js/jquery-1.10.2.min.js"></script>
+	  <script type="text/javascript" src="js/basic.js"></script>	
+      <script type="text/javascript" src="js/rem.js"></script>	
+	</body>
+</html>
