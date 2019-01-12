@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/base.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
-  <title>用户信息</title>
+  <title>开发票</title>
 	<script>
 		var attribute = 0;
 		function setAttr(attr){
@@ -39,7 +39,7 @@
 		</head>
 	<body>
 		<div class="header">
-			<span>用户信息</span>
+			<span>开发票</span>
 			<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
 		</div>
 		<!--div class="step">
@@ -65,65 +65,33 @@
 		</div-->
 		<ul class="dorm-book">
 			<li>
-				<span class="book-tit">单位名称</span>
+				<span class="book-tit"></span>
+				<input type="text" name="name"  />
+			</li>
+			<li>
+				<span class="book-tit">开票金额</span>
+				<input type="text" name="name" placeholder="5000.00 元"  disabled="disabled"/>
+			</li>
+			<li>
+				<span class="book-tit">发票台头</span>
 				<input type="text" name="name" placeholder="请填写您的单位名称" />
 			</li>
 			<li>
-				<span class="book-tit">统一信用代码</span>
-				<input type="text" name="name" placeholder="请填写您的单位代码" />
-			</li>
-			<li>
-				<div class="show-btn">
-					<span class="book-tit">单位类别</span>
-					<input type="text" name="name" placeholder="请选择单位类别" disabled="disabled" />
-				</div>
-				<span class="goin"><i class="iconfont icon-right"></i></span>
-				<div class="checkshow">
-					<p class="checked">政府机构</p>
-					<p>事业单位</p>
-					<p>社会组织和企业</p>
-				</div>
-			</li>
-			<li>
-				<span class="book-tit">单位地址</span>
-				<input type="text" name="name" placeholder="单位所在地地址" disabled="disabled"/>
-				<span class="goin"><i class="iconfont icon-right"></i></span>
+				<span class="book-tit">邮寄地址</span>
+				<input type="text" name="name" placeholder="请填写您的邮寄地址" />
 			</li>
 			<li>
 				<span class="book-tit">联系人</span>
-				<input type="text" name="name" placeholder="请填写联系人的姓名" />
+				<input type="text" name="name" placeholder="请填写您的联系人名称" />
 			</li>
 			<li>
-				<span class="book-tit">电话</span>
-				<input type="text" name="name" placeholder="请填写联系人的电话" />
-			</li>
-		</ul>
-		<ul class="contact-box">
-		</ul>
-		<ul class="dorm-book">
-			<li class="upload-head ta-center">
-				<span>
-					<img src="img/take-photo.png">
-					<input type="file" />
-				</span>
-				<p>上传营业执照副本</p>
-			</li>
-			<li>
-				<div class="show-btn">
-					<span class="book-tit">援助类别</span>
-					<input type="text" id="userAttr" name="name" placeholder="请选择您的类别" disabled="disabled" />
-				</div>
-				<span class="goin"><i class="iconfont icon-right"></i></span>
-				<div class="checkshow">
-					<p class="checked" onclick="setAttr(1)">援助天使</p>
-					<p onclick="setAttr(2)">理事成员</p>
-					<p onclick="setAttr(3)">特别理事成员</p>
-				</div>
+				<span class="book-tit">联系电话</span>
+				<input type="text" name="name" placeholder="请填写您的联系电话" />
 			</li>
 
 		</ul>
 		<div class="step-btn">
-				<a href="index-organization.html" class="ta-center db">完成</a>
+				<a href="javascript:history.go(-1)" class="ta-center db">完成</a>
 		</div>
   <script src="js/jquery-1.10.2.min.js"></script>
    <script type="text/javascript" src="js/basic.js"></script>	

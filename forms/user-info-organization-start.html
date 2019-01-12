@@ -35,15 +35,11 @@
 			else
 				alert("没有取到用户类型,没有页面参数。")
 		}
+		function step1(){
+			location.href="fuelCardRecharge.html";
+		}
 	</script>
 		</head>
-<!--/************************************************************
- *																*
- * 						      代码库							*
- *                        www.dmaku.com							*
- *       		  努力创建完善、持续更新插件以及模板			*
- * 																*
-**************************************************************-->
 	<body>
 		<div class="header">
 			<span>开启援助</span>
@@ -56,11 +52,11 @@
 			<ul class="fs0">
 				<li>
     			<span class="step-icon passbg">1</span>
-    			<p class="step-txt">联系信息</p>
+    			<p class="step-txt">类别信息</p>
     		</li>
     		<li>
     		<span class="step-icon passbg">2</span>
-    			<p class="step-txt">类别信息</p>
+    			<p class="step-txt">协议信息</p>
     		</li>
 			<li>
 				<span class="step-icon passbg">3</span>
@@ -108,7 +104,7 @@
 		</ul>
 		<div class="report-process">
 				<ul class="process-inner">
-				<li class="clearfix line1">
+				<!--li class="clearfix line1">
 					<span class="pro-img"><img src="img/register-in.png"></span>
 					<div class="pro-word">
 						<h3>单位信息</h3>
@@ -123,15 +119,32 @@
 						</ul>
 
 					</div>
+				</li-->
+					<li class="clearfix line1" onclick="step1()">
+						<span class="pro-img"><img src="img/register-in.png"></span>
+						<div class="pro-word">
+							<h3>行政事务帮扶</h3>
+							<p class="pro-tip">行政事务帮扶。</p>
+							<span class="goin"><i class="iconfont icon-right"></i></span>
+
+						</div>
+					</li>
 				</li>
 					<li class="clearfix">
-					<span class="pro-img"><img src="img/book-room-on.png"></span>
-					<div class="pro-word">
-						<h3>行政事务帮扶</h3>
-						<p class="pro-tip">行政事务帮扶。</p>
-						<span class="goin"><i class="iconfont icon-right"></i></span>
-					</div>
-				</li>
+						<span class="pro-img"><img src="img/arrive.png"></span>
+						<div class="pro-word  nodo">
+							<h3>单位信息</h3>
+							<p class="pro-tip">请填写真实的单位信息</p>
+							<span class="goin"><i class="iconfont icon-right"></i></span>
+							<ul class="dorm-book">
+								<li class="state-box">
+									申请状态：
+									<span class="state-img"><img src="img/state.png"></span>
+									<span class="state">待审核</span>
+								</li>
+							</ul>
+						</div>
+					</li>
 					<li class="clearfix">
 						<span class="pro-img"><img src="img/arrive.png"></span>
 						<div class="pro-word  nodo">
@@ -163,8 +176,8 @@
 
 
 		<div class="step-btn">
-			<a href="index-organization.html" class="db ta-center print">完成</a>
-			<a href="user-info-organization.html" class="db ta-center">继续填写用户信息</a>
+			<a href="../index.html" class="db ta-center print">完成</a>
+			<!--a href="user-info-organization.html" class="db ta-center">继续填写用户信息</a-->
 		</div>
 	  <script src="js/jquery-1.10.2.min.js"></script>
 	  <script type="text/javascript" src="js/basic.js"></script>	

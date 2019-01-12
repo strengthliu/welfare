@@ -10,13 +10,6 @@
   <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
   <title>加油卡账户充值</title>
 		</head>
-<!--/************************************************************
- *																*
- * 						      代码库							*
- *                        www.dmaku.com							*
- *       		  努力创建完善、持续更新插件以及模板			*
- * 																*
-**************************************************************-->
 	<body>
 		<div class="header">
 			<span>加油卡账户充值</span>
@@ -35,8 +28,8 @@
 				<li class="state-box">
 					<span class="book-tit">充值金额</span>
 					<input type="text" name="name" placeholder="请输入您要充值的金额"/>
-					<span class="state-img"><img src="img/state.png"></span>
-					<span class="state">确定充值</span>
+					<span class="state-img"><img src="img/state.png" onclick="location.href='payRouteSelect.html'"></span>
+					<span class="state"><a href="payRouteSelect.html">确定充值</a></span>
 				</li>
     	</ul>
 
@@ -50,17 +43,17 @@
 			<li class="cost clearfix first">
 				<span>时间</span>
 				<span>金额</span>
-				<span>操作人</span>
+				<span>发票</span>
 			</li>
 			<li class="cost clearfix">
 				<span>2019.01.01 12:00:00</span>
 				<span>3000.00</span>
-				<span>李四</span>
+				<span>发票已开</span>
 			</li>
 			<li class="cost clearfix">
 				<span>2019.01.01 12:00:00</span>
 				<span>3000.00</span>
-				<span>李四</span>
+				<span><input type="submit" value="开发票" onclick="location.href='fuelCardInvoice.html'" /></span>
 			</li>
 		</ul>
 	  <script src="js/jquery-1.10.2.min.js"></script>

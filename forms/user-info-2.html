@@ -16,10 +16,10 @@
 			var attrEle = document.getElementById("userAttr");
 			switch(attr){
 				case 1:
-					attrEle.setAttribute("value","我需要就业援助,也需要援助中心帮助缴纳社保。");
+					attrEle.setAttribute("value","我需要援助站缴纳社保，也需要就业、创业援助。");
 					break;
 				case 2:
-					attrEle.setAttribute("value","我不需要就业援助,只需要援助中心代办社保。");
+					attrEle.setAttribute("value","我需要援助站代办社保，不需要就业、创业援助。");
 					break;
 				case 3:
 					attrEle.setAttribute("value","一心做公益,我是热心的援助天使。");
@@ -43,7 +43,7 @@
 						location.href='user-info-student-notice.html?userAttr=1';
 						break;
 					case 2:
-						location.href='user-info-person-notice.html.html?userAttr=2';
+						location.href='#';
 						break;
 					case 3:
 						location.href='user-info-person-notice.html?userAttr=3';
@@ -90,8 +90,8 @@
 				</div>
 				<span class="goin"><i class="iconfont icon-right"></i></span>
 				<div id="attrSelectOption" class="checkshow">
-					<p onclick="setAttr(1)">我需要就业援助,也需要援助中心帮助缴纳社保。</p>
-					<p onclick="setAttr(2)">我不需要就业援助,只需要援助中心代办社保。</p>
+					<p onclick="setAttr(1)">我需要援助站缴纳社保，也需要就业、创业援助。</p>
+					<p onclick="setAttr(2)">我需要援助站代办社保，不需要就业、创业援助。</p>
 					<p onclick="setAttr(3)">一心做公益,我是热心的援助天使。</p>
 				</div>
 			</li>
