@@ -16,13 +16,124 @@
 			var attrEle = document.getElementById("userAttr");
 			switch(attr){
 				case 1:
-					attrEle.setAttribute("value","援助天使");
+					var parentEle = attrEle.parentNode.parentNode.parentNode;
+					var attrEleInvoiceMsg = document.getElementById("invoiceMsg");
+					if(attrEleInvoiceMsg!=null)
+						attrEleInvoiceMsg.parentNode.removeChild(attrEleInvoiceMsg);
+					attrEle.setAttribute("value","新建开票信息");
+					var liEle = document.createElement('ul');
+						liEle.innerHTML =
+								'<ul class="dorm-book" id="invoiceMsg">'+
+									'<li>'+
+										'<span class="book-tit">发票台头</span>'+
+										'<input type="text" name="name" placeholder="请填写您的单位名称" />'+
+									'</li>'+
+									'<li>'+
+										'<span class="book-tit">纳税人识别号</span>'+
+										'<input type="text" name="name" placeholder="请填写您的邮寄地址" />'+
+									'</li>'+
+									'<li>'+
+										'<span class="book-tit">开户银行</span>'+
+										'<input type="text" name="name" placeholder="请填写您的邮寄地址" />'+
+									'</li>'+
+									'<li>'+
+										'<span class="book-tit">账号</span>'+
+										'<input type="text" name="name" placeholder="请填写您的邮寄地址" />'+
+									'</li>'+
+									'<li>'+
+										'<span class="book-tit">邮寄地址</span>'+
+										'<input type="text" name="name" placeholder="请填写您的邮寄地址" />'+
+									'</li>'+
+									'<li>'+
+										'<span class="book-tit">联系人</span>'+
+										'<input type="text" name="name" placeholder="请填写您的联系人名称" />'+
+									'</li>'+
+									'<li>'+
+										'<span class="book-tit">联系电话</span>'+
+										'<input type="text" name="name" placeholder="请填写您的联系电话" />'+
+									'</li>'+
+								'</ul>';
+						parentEle.appendChild(liEle);
 					break;
 				case 2:
-					attrEle.setAttribute("value","理事成员");
+					var parentEle = attrEle.parentNode.parentNode.parentNode;
+					var attrEleInvoiceMsg = document.getElementById("invoiceMsg");
+					if(attrEleInvoiceMsg!=null)
+						attrEleInvoiceMsg.parentNode.removeChild(attrEleInvoiceMsg);
+					attrEle.setAttribute("value","XXX有限公司");
+					var liEle = document.createElement('ul');
+					liEle.innerHTML =
+							'<ul class="dorm-book" id="invoiceMsg">'+
+							'<li>'+
+							'<span class="book-tit">发票台头</span>'+
+							'<input type="text" name="name" placeholder="XXX有限公司"  disabled="disabled" />'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">纳税人识别号</span>'+
+							'<input type="text" name="name" placeholder="790078712093893"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">开户银行</span>'+
+							'<input type="text" name="name" placeholder="中国银行贵州省支行贵阳市XXX区分理处"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">账号</span>'+
+							'<input type="text" name="name" placeholder="7940-3892178478321"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">邮寄地址</span>'+
+							'<input type="text" name="name" placeholder="贵州省贵阳市XXX区XXXX路XXX号"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">联系人</span>'+
+							'<input type="text" name="name" placeholder="张三"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">联系电话</span>'+
+							'<input type="text" name="name" placeholder="13900000001"  disabled="disabled"/>'+
+							'</li>'+
+							'</ul>';
+					parentEle.appendChild(liEle);
 					break;
 				case 3:
-					attrEle.setAttribute("value","特别理事成员");
+					var attrEleInvoiceMsg = document.getElementById("invoiceMsg");
+					var parentEle = attrEle.parentNode.parentNode.parentNode;
+					if(attrEleInvoiceMsg!=null)
+						attrEleInvoiceMsg.parentNode.removeChild(attrEleInvoiceMsg);
+					attrEle.setAttribute("value","YYY管理局");
+					var liEle = document.createElement('ul');
+					liEle.innerHTML =
+							'<ul class="dorm-book" id="invoiceMsg">'+
+							'<li>'+
+							'<span class="book-tit">发票台头</span>'+
+							'<input type="text" name="name" placeholder="YYY管理局"  disabled="disabled" />'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">纳税人识别号</span>'+
+							'<input type="text" name="name" placeholder="790078712093893"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">开户银行</span>'+
+							'<input type="text" name="name" placeholder="中国银行贵州省支行贵阳市XXX区分理处"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">账号</span>'+
+							'<input type="text" name="name" placeholder="7940-3892178478321"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">邮寄地址</span>'+
+							'<input type="text" name="name" placeholder="贵州省贵阳市XXX区XXXX路XXX号"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">联系人</span>'+
+							'<input type="text" name="name" placeholder="张三"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">联系电话</span>'+
+							'<input type="text" name="name" placeholder="13900000001"  disabled="disabled"/>'+
+							'</li>'+
+							'</ul>';
+					parentEle.appendChild(liEle);
 					break;
 			}
 
@@ -73,23 +184,33 @@
 				<input type="text" name="name" placeholder="5000.00 元"  disabled="disabled"/>
 			</li>
 			<li>
-				<span class="book-tit">发票台头</span>
-				<input type="text" name="name" placeholder="请填写您的单位名称" />
+				<div class="show-btn">
+					<span class="book-tit">发票信息</span>
+					<input type="text" id="userAttr" name="name" placeholder="请选择发票信息" disabled="disabled" />
+				</div>
+				<span class="goin"><i class="iconfont icon-right"></i></span>
+				<div id="attrSelectOption" class="checkshow">
+					<p onclick="setAttr(1)">新建开票信息</p>
+					<p onclick="setAttr(2)">XXX有限公司</p>
+					<p onclick="setAttr(3)">YYY管理局</p>
+				</div>
 			</li>
 			<li>
-				<span class="book-tit">邮寄地址</span>
-				<input type="text" name="name" placeholder="请填写您的邮寄地址" />
+				<div class="show-btn">
+					<span class="book-tit">发票类别</span>
+					<input type="text" id="userAttr" name="name" placeholder="请选择发票类别" disabled="disabled" />
+				</div>
+				<span class="goin"><i class="iconfont icon-right"></i></span>
+				<div id="attrSelectOption" class="checkshow">
+					<p >增值税普票</p>
+					<p >增值税专票</p>
+					<p >电子发票</p>
+					<span class="close">关闭</span>
+				</div>
 			</li>
-			<li>
-				<span class="book-tit">联系人</span>
-				<input type="text" name="name" placeholder="请填写您的联系人名称" />
-			</li>
-			<li>
-				<span class="book-tit">联系电话</span>
-				<input type="text" name="name" placeholder="请填写您的联系电话" />
-			</li>
+			<li><span></span></li>
+			</ul>
 
-		</ul>
 		<div class="step-btn">
 				<a href="javascript:history.go(-1)" class="ta-center db">完成</a>
 		</div>

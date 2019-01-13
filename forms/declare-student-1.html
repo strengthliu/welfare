@@ -9,7 +9,53 @@
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
   <title>推荐申报</title>
-		</head>
+	<script>
+		var attribute = 0;
+		function setAttr(attr){
+			attribute = attr;
+			var attrEle = document.getElementById("userAttr");
+			switch(attr){
+				case 1:
+					attrEle.setAttribute("value","向贵州省人社厅申报。");
+					break;
+				case 2:
+					attrEle.setAttribute("value","向就读学校申报。");
+					break;
+				case 3:
+					attrEle.setAttribute("value","申请加入见习基地。");
+					break;
+			}
+
+			var event = new MouseEvent('click', {
+				'view': window,
+				'bubbles': true,
+				'cancelable': true
+			});
+			event.initMouseEvent("click",true,true,document.defaultView,0,0,0,0,0,false,false,false,false,0,null);
+			attrEle.dispatchEvent(event);
+
+		}
+
+		function nextStep(){
+			if(attribute !=0)
+				switch(attribute){
+					case 1:
+						location.href='user-info-student-notice.html?userAttr=1';
+						break;
+					case 2:
+						location.href='#';
+						break;
+					case 3:
+						location.href='user-info-person-notice.html?userAttr=3';
+						break;
+				}
+			else
+				alert("您还没有选择用户类别");
+		}
+
+
+	</script>
+</head>
 	<body>
 		<div class="header">
 			<span>推荐申报</span>
@@ -24,13 +70,13 @@
 			<li>
 				<div class="show-btn">
 					<span class="book-tit">申报类型</span>
-					<input type="text" name="name" placeholder="请选择申报类型" disabled="disabled" />
+					<input type="text" id="userAttr" name="name" placeholder="请选择申报类型" disabled="disabled" />
 				</div>
 				<span class="goin"><i class="iconfont icon-right"></i></span>
 				<div class="checkshow">
-					<p class="checked">向贵州省人社厅申报</p>
-					<p>向就读学校申报</p>
-					<p>申请加入见习基地</p>
+					<p class="checked" onclick="setAttr(1)">向贵州省人社厅申报</p>
+					<p onclick="setAttr(2)">向就读学校申报</p>
+					<p onclick="setAttr(3)">申请加入见习基地</p>
 				</div>
 			</li>
 			</li>
