@@ -9,42 +9,163 @@
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
   <title>我要捐赠</title>
+	<script>
+		var attribute = 0;
+		function setAttr(attr){
+			attribute = attr;
+			var attrEle = document.getElementById("userAttr");
+			switch(attr){
+				case 1:
+					var parentEle = attrEle.parentNode.parentNode.parentNode;
+					var attrEleInvoiceMsg = document.getElementById("donateContract");
+					if(attrEleInvoiceMsg!=null)
+						attrEleInvoiceMsg.parentNode.removeChild(attrEleInvoiceMsg);
+					attrEle.setAttribute("value","新建开票信息");
+					var liEle = document.createElement('div');
+					liEle.innerHTML =
+								'<ul class="answer-content" id="donateContract">'+
+									'<a href="#">'+
+										'<li class="answer-list">'+
+											'<h3 class="list-tit" align="center">捐赠协议书</h3>'+
+											'<p class="list-txt">'+
+												'<span>甲方:<input type="text"/></span>'+
+											'</p>'+
+											'<p class="list-txt">'+
+												'<span>乙方:知行公益援助站</span>'+
+											'</p>'+
+											'<p>'+
+												'<span>捐款金额<input type="text"/>万元。</span>'+
+											'</p>'+
+										'</li>'+
+									'</a>'+
+									'<li>'+
+										'<span><input type="checkbox" name="vehicle" value="Car" checked="checked" /> 我同意《捐款协议书》</span>'+
+									'</li>'+
+									'<div class="step-btn">'+
+										'<a href="payRouteSelect.html" class="ta-center db">支付捐款</a>'+
+									'</div>'+
+								'</ul>';
+					parentEle.appendChild(liEle);
+					break;
+				case 2:
+					var parentEle = attrEle.parentNode.parentNode.parentNode;
+					var attrEleInvoiceMsg = document.getElementById("invoiceMsg");
+					if(attrEleInvoiceMsg!=null)
+						attrEleInvoiceMsg.parentNode.removeChild(attrEleInvoiceMsg);
+					attrEle.setAttribute("value","XXX有限公司");
+					var liEle = document.createElement('ul');
+					liEle.innerHTML =
+							'<ul class="dorm-book" id="invoiceMsg">'+
+							'<li>'+
+							'<span class="book-tit">发票台头</span>'+
+							'<input type="text" name="name" placeholder="XXX有限公司"  disabled="disabled" />'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">纳税人识别号</span>'+
+							'<input type="text" name="name" placeholder="790078712093893"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">开户银行</span>'+
+							'<input type="text" name="name" placeholder="中国银行贵州省支行贵阳市XXX区分理处"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">账号</span>'+
+							'<input type="text" name="name" placeholder="7940-3892178478321"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">邮寄地址</span>'+
+							'<input type="text" name="name" placeholder="贵州省贵阳市XXX区XXXX路XXX号"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">联系人</span>'+
+							'<input type="text" name="name" placeholder="张三"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">联系电话</span>'+
+							'<input type="text" name="name" placeholder="13900000001"  disabled="disabled"/>'+
+							'</li>'+
+							'</ul>';
+					parentEle.appendChild(liEle);
+					break;
+				case 3:
+					var attrEleInvoiceMsg = document.getElementById("invoiceMsg");
+					var parentEle = attrEle.parentNode.parentNode.parentNode;
+					if(attrEleInvoiceMsg!=null)
+						attrEleInvoiceMsg.parentNode.removeChild(attrEleInvoiceMsg);
+					attrEle.setAttribute("value","YYY管理局");
+					var liEle = document.createElement('ul');
+					liEle.innerHTML =
+							'<ul class="dorm-book" id="invoiceMsg">'+
+							'<li>'+
+							'<span class="book-tit">发票台头</span>'+
+							'<input type="text" name="name" placeholder="YYY管理局"  disabled="disabled" />'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">纳税人识别号</span>'+
+							'<input type="text" name="name" placeholder="790078712093893"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">开户银行</span>'+
+							'<input type="text" name="name" placeholder="中国银行贵州省支行贵阳市XXX区分理处"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">账号</span>'+
+							'<input type="text" name="name" placeholder="7940-3892178478321"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">邮寄地址</span>'+
+							'<input type="text" name="name" placeholder="贵州省贵阳市XXX区XXXX路XXX号"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">联系人</span>'+
+							'<input type="text" name="name" placeholder="张三"  disabled="disabled"/>'+
+							'</li>'+
+							'<li>'+
+							'<span class="book-tit">联系电话</span>'+
+							'<input type="text" name="name" placeholder="13900000001"  disabled="disabled"/>'+
+							'</li>'+
+							'</ul>';
+					parentEle.appendChild(liEle);
+					break;
+			}
+
+			var event = new MouseEvent('click', {
+				'view': window,
+				'bubbles': true,
+				'cancelable': true
+			});
+			event.initMouseEvent("click",true,true,document.defaultView,0,0,0,0,0,false,false,false,false,0,null);
+			attrEle.dispatchEvent(event);
+		}
+
+	</script>
+</head>
 	<body style="background: #eee;">
 		<div class="header">
 				<span>我要捐赠</span>
-				<a href="ask.html" class="back"><i class="iconfont icon-left"></i></a>
+				<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
 			</div>
 		<div class="banner">
 			<img src="img/self-report.png">
 		</div>
-		<div class="answer-box">
-			<ul class="answer-content">
-				<a href="uploaDate.html">
-				<li class="answer-list">
-					<h3 class="list-tit">请问如何申请助学贷款？请问如何申请助学贷款？</h3>
-				    <p class="list-txt">
-                                           学生申请贷款，应由本人向学校贷款审定机构提出申请，提供本人及家
-					庭经济状况的必要资料（一般包括本人书面申请、家庭经济情况调查表、
-					街道或乡级以上的困难证明、担保人的担保书及本人的现实表现等），
-					承诺有关还贷的责任条款，提供还贷担保人。目前各高校学生贷款实际
-					额度一般每年在1000元以上。
-				    </p>
-				</li>
-				</a>
-				<a href="uploaDate.html">
-				<li class="answer-list">
-					<h3 class="list-tit">请问如何申请助学贷款？请问如何申请助学贷款？</h3>
-				    <p class="list-txt">
-                                           学生申请贷款，应由本人向学校贷款审定机构提出申请，提供本人及家
-					庭经济状况的必要资料（一般包括本人书面申请、家庭经济情况调查表、
-					街道或乡级以上的困难证明、担保人的担保书及本人的现实表现等），
-					承诺有关还贷的责任条款，提供还贷担保人。目前各高校学生贷款实际
-					额度一般每年在1000元以上。
-				    </p>
-				</li>
-				</a>
-			</ul>
-		</div>
+		<ul class="dorm-book">
+			<li>
+				<div class="show-btn">
+					<span class="book-tit">捐赠类型</span>
+					<input type="text" id="userAttr" name="name" placeholder="请选择捐赠类型" disabled="disabled" />
+				</div>
+				<span class="goin"><i class="iconfont icon-right"></i></span>
+				<div id="attrSelectOption" class="checkshow">
+					<p onclick="setAttr(1)">限定捐赠</p>
+					<p onclick="setAttr(2)">非限定捐赠</p>
+					<p onclick="setAttr(3)">物资捐赠</p>
+				</div>
+			</li>
+			<!--li>
+				<span class="book-tit">开票金额</span>
+				<input type="text" name="name" placeholder="5000.00 元"  disabled="disabled"/>
+			</li-->
+		</ul>
 	  <script src="js/jquery-1.10.2.min.js"></script>
 	  <script type="text/javascript" src="js/basic.js"></script>	
       <script type="text/javascript" src="js/rem.js"></script>	
