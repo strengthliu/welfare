@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/base.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
-  <title>开发票</title>
+  <title>开票据</title>
 	<script>
 		var attribute = 0;
 		function setAttr(attr){
@@ -25,21 +25,10 @@
 						liEle.innerHTML =
 								'<ul class="dorm-book" id="invoiceMsg">'+
 									'<li>'+
-										'<span class="book-tit">发票台头</span>'+
+										'<span class="book-tit">捐赠人</span>'+
 										'<input type="text" name="name" placeholder="请填写您的单位名称" />'+
 									'</li>'+
-									'<li>'+
-										'<span class="book-tit">纳税人识别号</span>'+
-										'<input type="text" name="name" placeholder="请填写您的邮寄地址" />'+
-									'</li>'+
-									'<li>'+
-										'<span class="book-tit">开户银行</span>'+
-										'<input type="text" name="name" placeholder="请填写您的邮寄地址" />'+
-									'</li>'+
-									'<li>'+
-										'<span class="book-tit">账号</span>'+
-										'<input type="text" name="name" placeholder="请填写您的邮寄地址" />'+
-									'</li>'+
+
 									'<li>'+
 										'<span class="book-tit">邮寄地址</span>'+
 										'<input type="text" name="name" placeholder="请填写您的邮寄地址" />'+
@@ -150,7 +139,7 @@
 		</head>
 	<body>
 		<div class="header">
-			<span>开发票</span>
+			<span>开票据</span>
 			<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
 		</div>
 		<!--div class="step">
@@ -185,7 +174,7 @@
 			</li>
 			<li>
 				<div class="show-btn">
-					<span class="book-tit">发票信息</span>
+					<span class="book-tit">票据信息</span>
 					<input type="text" id="userAttr" name="name" placeholder="请选择发票信息" disabled="disabled" />
 				</div>
 				<span class="goin"><i class="iconfont icon-right"></i></span>
@@ -193,19 +182,6 @@
 					<p onclick="setAttr(1)">新建开票信息</p>
 					<p onclick="setAttr(2)">XXX有限公司</p>
 					<p onclick="setAttr(3)">YYY管理局</p>
-				</div>
-			</li>
-			<li>
-				<div class="show-btn">
-					<span class="book-tit">发票类别</span>
-					<input type="text" id="userAttr" name="name" placeholder="请选择发票类别" disabled="disabled" />
-				</div>
-				<span class="goin"><i class="iconfont icon-right"></i></span>
-				<div id="attrSelectOption" class="checkshow">
-					<p >增值税普票</p>
-					<p >增值税专票</p>
-					<p >电子发票</p>
-					<span class="close">关闭</span>
 				</div>
 			</li>
 			<li><span></span></li>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/base.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
-  <title>加油卡管理</title>
+  <title>岗位管理</title>
 	<script>
 		function changeKeeper(buttonid,keeperName1){
 			var tx = document.getElementById(buttonid);
@@ -25,7 +25,7 @@
 
 <body>
 		<div class="header">
-			<span>加油卡管理</span>
+			<span>岗位管理</span>
 			<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
 		</div>
 		<div class="banner">
@@ -36,11 +36,11 @@
 			<ul class="dorm-book">
 				<li class="state-box">
 					<span class="book-tit">账户余额:</span>
-					<text>4900.00元</text>
+					<text>6000.00元</text>
 					<span class="state-img"><img src="img/state.png"></span>
-					<span class="state"><a href="fuelCardRecharge.html">账户充值</a></span>
+					<span class="state"><a href="fuelCardRecharge.html">充值商业保险金</a></span>
 					<span class="state-img"><img src="img/state.png"></span>
-					<span class="state"><a href="fuelCardRecive-organization.html">签收加油卡</a></span>
+					<span class="state"><a href="jobInfoEdit.html">新建岗位</a></span>
 				</li>
     	</ul>
 
@@ -49,46 +49,44 @@
 		</ul>
 		<ul class="dorm-book mt3">
 			<li class="basic-tit">
-			    拥有加油卡
+			    岗位列表
 			</li>
 			<li class="cost clearfix first">
-				<span>卡号</span>
-				<span>持有人</span>
+				<span>岗位名称</span>
+				<span>待约/到岗/需求</span>
 				<span>管理操作</span>
 			</li>
 			<li class="cost clearfix">
-				<span>878701839291</span>
-				<span id="keeperName1">张三</span>
+				<span onclick="location.href='jobInfoView.html'">销售助理</span>
+				<span id="keeperName1">0/0/3</span>
 				<span>
 					<!--div class="reportcard">
 						<a href="#" class="db ta-center">充卡</a>
 						<a href="#" class="db ta-center">充卡</a>
 						<a href="#" class="db ta-center">充卡</a>
 					</div-->
-					<button><a href="fuelCardRechargeToCard.html">充卡</a></button><span>|</span>
-					<input type="button" value="改人" id="changeKeeperButton1" onclick=changeKeeper(id,"keeperName1")></inputbutton><span>|</span>
+					<button><a  onclick="alert('您的商业保险金余额不足,请减少用人数量,或充值。')">发布</a></button><span>|</span>
+					<button><a href="jobInfoEdit.html">修改</a></button><span>|</span>
 					<button>删除</button>
 				</span>
 			</li>
 			<li class="cost clearfix">
-				<span>878701839291</span>
-				<span id="keeperName2">李四</span>
+				<span onclick="location.href='jobInfoView.html'">行政文员</span>
+				<span id="keeperName2" onclick="location.href='userList-student.html'">0/2/2</span>
 				<span>
 					<div>
-					<button><a href="fuelCardRechargeToCard.html">充卡</a></button><span>|</span>
-					<input type="button" value="改人" id="changeKeeperButton1" onclick=changeKeeper(id,"keeperName2")></inputbutton><span>|</span>
-					<button>删除</button>
+					<button><a href="fuelCardRechargeToCard.html">已招满</a></button><span>|</span>
+					<input type="button" value="取消发布" id="changeKeeperButton1" onclick=alert('您确定要取消发布?')></inputbutton>
 					</div>
 				</span>
 			</li>
 			<li class="cost clearfix">
-				<span>878701839291</span>
-				<span id="keeperName3">张三</span>
+				<span onclick="location.href='jobInfoView.html'">外勤人员</span>
+				<span id="keeperName2" onclick="location.href='userList-student.html'">15/1/5</span>
 				<span>
 					<div>
-					<button><a href="fuelCardRechargeToCard.html">充卡</a></button><span>|</span>
-					<input type="button" value="改人" id="changeKeeperButton1" onclick=changeKeeper(id,"keeperName3")></inputbutton><span>|</span>
-					<button>删除</button>
+					<button><a href="fuelCardRechargeToCard.html">已发布</a></button><span>|</span>
+					<input type="button" value="取消发布" id="changeKeeperButton1" onclick=alert('您确定要取消发布?')></inputbutton>
 					</div>
 				</span>
 			</li>

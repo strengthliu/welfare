@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/base.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
-  <title>联系人信息</title>
+  <title>物流管理</title>
 	<script>
 		var attribute = 0;
 		function setAttr(attr){
@@ -54,83 +54,47 @@
 		}
 	</script>
 		</head>
-<!--/************************************************************
- *																*
- * 						      代码库							*
- *                        www.dmaku.com							*
- *       		  努力创建完善、持续更新插件以及模板			*
- * 																*
-**************************************************************-->
 	<body>
 		<div class="header">
-			<span>联系人信息</span>
+			<span>物流管理</span>
 			<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
 		</div>
 		<div class="step">
 			<ul class="fs0">
 				<li>
 					<span class="step-icon passbg">1</span>
-					<p class="step-txt">联系信息</p>
+					<p class="step-txt">发货单</p>
 				</li>
 				<li>
     			<span class="step-icon">2</span>
-    			<p>类别信息</p>
+    			<p>已发货</p>
     		</li>
 				<li>
 					<span class="step-icon">3</span>
-					<p>开启援助</p>
+					<p>已收货</p>
 				</li>
 				<li>
 					<span class="step-icon">4</span>
-					<p>用户信息</p>
+					<p>完成</p>
 				</li>
     	</ul>
     	<span class="pro-line"><img src="img/pro-line4.png"></span>
 		</div>
 		<ul class="dorm-book">
-			<li class="upload-head ta-center">
-				<span>
-					<img src="img/take-photo.png">
-					<input type="file" />
+			<li>
+				<span class="book-tit">
+					收货地址
 				</span>
-				<p>为方便大家认识您,请上传近期大头照片</p>
+				<input type="text" name="name" placeholder="XXXX省XXX市XXX区"  disabled="disabled"/>
 			</li>
+			<li><span></span></li>
 			<li>
-			    <span class="book-tit">姓名</span>
-			    <input type="text" name="name" placeholder="请输入姓名" />
-			    <div class="sex">
-			    	<label class="sex-check">男</label>
-			    	<label>女</label>
-			    </div>
-			</li>
-			<li>
-				<span class="book-tit">联系邮箱</span>
-		        <input type="text" name="name" placeholder="请填写您的联系邮箱地址" />
-			</li>
-			<li>
-				<span class="book-tit">联系电话</span>
-				<input type="text" name="name" placeholder="请填写您的联系方式" />
-			</li>
-			<li>
-				<span class="book-tit">联系地址</span>
-				<input type="text" name="name" placeholder="您可以接收快递的地址" disabled="disabled"/>
-				<span class="goin"><i class="iconfont icon-right"></i></span>
-			</li>
-			<li>
-				<div class="show-btn">
-				<span class="book-tit">用户类别</span>
-		        <input type="text" id="userAttr" name="name" placeholder="请选择您要注册的用户类别" disabled="disabled" />
-		       </div>
-		        <span class="goin"><i class="iconfont icon-right"></i></span>
-		        <div id="attrSelectOption" class="checkshow">
-		        	<p class="checked" onclick="setAttr(1)">援助天使</p>
-		        	<p onclick="setAttr(2)">理事成员</p>
-		        	<p onclick="setAttr(3)">特别理事成员</p>
-		        </div>
+				<span class="book-tit">快递单号</span>
+		        <input type="text" name="name" placeholder="请填写您的发货快递单号" />
 			</li>
 		</ul>
 		<div class="step-btn">
-				<a href="#" id="nextStepButton" class="ta-center db" onClick="nextStep();">下一步</a>
+				<a href="javascript:history.go(-1)" id="nextStepButton" class="ta-center db"">完成</a>
 		</div>
   <script src="js/jquery-1.10.2.min.js"></script>
    <script type="text/javascript" src="js/basic.js"></script>	
