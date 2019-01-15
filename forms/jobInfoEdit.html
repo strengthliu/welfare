@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+  <title>岗位信息</title>
+	<script>
+		var attribute = 0;
+		function setAttr(attr){
+			attribute = attr;
+			var attrEle = document.getElementById("userAttr");
+			switch(attr){
+				case 1:
+					attrEle.setAttribute("value","受援个人");
+					break;
+				case 2:
+					attrEle.setAttribute("value","公益个人");
+					break;
+				case 3:
+					attrEle.setAttribute("value","公益单位");
+					break;
+			}
+
+			var event = new MouseEvent('click', {
+				'view': window,
+				'bubbles': true,
+				'cancelable': true
+			});
+			event.initMouseEvent("click",true,true,document.defaultView,0,0,0,0,0,false,false,false,false,0,null);
+			attrEle.dispatchEvent(event);
+		}
+
+		function nextStep(){
+			if(attribute !=0)
+			switch(attribute){
+				case 1:
+					location.href='user-info-student.html';
+					break;
+				case 2:
+					location.href='user-info-person.html';
+					break;
+				case 3:
+					location.href='user-info-organization.html';
+					break;
+			}
+			else
+					alert("您还没有选择用户类别");
+
+		}
+	</script>
+		</head>
+	<body>
+		<div class="header">
+			<span>岗位信息</span>
+			<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
+		</div>
+		<ul class="dorm-book">
+			<li>
+				<span class="book-tit">所属部门</span>
+				<input type="text" name="name" placeholder="请填写部门名称" />
+			</li>
+			<li>
+				<span class="book-tit">岗位名称</span>
+				<input type="text" name="name" placeholder="请填写岗位名称" />
+			</li>
+			<li>
+				<span class="book-tit">需要人数</span>
+				<input type="text" name="name" placeholder="请填写需要人数" />
+			</li>
+			<div class="contain"  style="padding-top:3%;">
+				<li>
+					<span class="book-tit">岗位说明</span>
+				</li>
+				<div class="reason">
+					<textarea  placeholder="请您在此输入岗位说明。"></textarea>
+				</div>
+			</div>
+			<div class="contain"  style="padding-top:3%;">
+				<li>
+					<span class="book-tit">任职要求</span>
+				</li>
+				<div class="reason">
+					<textarea  placeholder="请您在此输入任职要求。"></textarea>
+				</div>
+			</div>
+			<div class="contain"  style="padding-top:3%;">
+				<li>
+					<span class="book-tit"></span>
+				</li>
+			</div>
+		</ul>
+		<div class="step-btn">
+				<a href="javascript:history.go(-1)" id="nextStepButton" class="ta-center db">完成</a>
+		</div>
+  <script src="js/jquery-1.10.2.min.js"></script>
+   <script type="text/javascript" src="js/basic.js"></script>	
+  <script type="text/javascript" src="js/rem.js"></script>	
+	</body>
+</html>
