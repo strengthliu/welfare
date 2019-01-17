@@ -10,20 +10,6 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css" />
 		<title>预约面试</title>
-		<link rel="stylesheet" href="css/amazeui.min.css" type="text/css" />
-		<link rel="stylesheet" href="css/style1.css" type="text/css" />
-		<script type="text/javascript" src="js/jquery.min.js" ></script>
-		<script type="text/javascript" src="js/amazeui.min.js" ></script>
-		<script>
-			$(function(){
-				$(".shaixuan").click(function(){
-					$(".condition").fadeIn();
-				})
-				$(".return").click(function(){
-					$(".condition").fadeOut();
-				})
-			})
-		</script>
 		<script>
 			var attribute = 0;
 			function setAttr(attr){
@@ -69,13 +55,13 @@
 						<span class="close">关闭</span>
 					</div>
 				</li>
-					</ul>
+				</ul>
 
 				<div class="myanswer-box">
 					<div class="delayReport">
 						<ul class="hd clearfix">
 						<li class="active">待约人员</li>
-						<li>已经到岗人员</li>
+						<li>已约人员</li>
 						</ul>
 					</div>
 					<div class="bd">
@@ -363,7 +349,7 @@
 						</a>
 					</li>
 					<li class="page-item">
-						<a href="#">
+						<a href="../logistics/find.html">
 							<i class="iconfont icon-ask"></i>
 							<p>消息及待办</p>
 						</a>
