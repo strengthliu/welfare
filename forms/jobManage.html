@@ -49,10 +49,6 @@
 			<li class="basic-tit">
 			    岗位列表
 				<span class="state-img"><img src="img/state.png"></span>
-				<span class="state"><a href="userList-student.html">预约表</a></span>
-				<span class="state-img"><img src="img/state.png"></span>
-				<span class="state"><a href="userList-student.html">面试表</a></span>
-				<span class="state-img"><img src="img/state.png"></span>
 				<span class="state"><a href="jobInfoEdit.html">新建岗位</a></span>
 
 			</li>
@@ -63,7 +59,7 @@
 				<span>管理操作</span>
 			</li>
 			<li class="cost clearfix">
-				<span onclick="location.href='jobInfoView.html'">销售助理</span>
+				<span onclick="location.href='jobInfoView-organization.html'">销售助理</span>
 				<span id="keeperName1">0/0/3</span>
 				<span>
 					<!--div class="reportcard">
@@ -77,27 +73,57 @@
 				</span>
 			</li>
 			<li class="cost clearfix">
-				<span onclick="location.href='jobInfoView.html'">行政文员</span>
+				<span onclick="location.href='jobInfoView-organization.html'">行政文员</span>
 				<span id="keeperName2" onclick="location.href='userList-student.html'">0/2/2</span>
 				<span>
 					<div>
-					<button><a href="#">已招满</a></button><span>|</span>
+					<button><a href="jobInfoView-organization.html">查看</a></button><span>|</span>
 					<input type="button" value="取消发布" id="changeKeeperButton1" onclick=alert('您确定要取消发布?')></inputbutton>
 					</div>
 				</span>
 			</li>
 			<li class="cost clearfix">
-				<span onclick="location.href='jobInfoView.html'">外勤人员</span>
+				<span onclick="location.href='jobInfoView-organization.html'">外勤人员</span>
 				<span id="keeperName2" onclick="location.href='userList-student.html'">15/1/5</span>
 				<span>
 					<div>
-					<button><a href="userList-student.html">看预约</a></button><span>|</span>
+					<button><a href="jobInfoView-organization.html">查看</a></button><span>|</span>
+					<!--button><a href="userList-student.html">看预约</a></button><span>|</span-->
 					<input type="button" value="取消发布" id="changeKeeperButton1" onclick=alert('您确定要取消发布?')></inputbutton>
 					</div>
 				</span>
 			</li>
 		</ul>
-	  <script src="js/jquery-1.10.2.min.js"></script>
+		<div class="footer">
+			<ul class="footer-page clearfix">
+				<li class="page-item active">
+					<a href="jobManage.html">
+						<i class="iconfont icon-index"></i>
+						<p>岗位管理</p>
+					</a>
+				</li>
+				<li class="page-item">
+					<a href="userList-student.html">
+						<i class="iconfont icon-computer"></i>
+						<p>预约面试</p>
+					</a>
+				</li>
+				<li class="page-item">
+					<a href="#">
+						<i class="iconfont icon-ask"></i>
+						<p>消息及待办</p>
+					</a>
+				</li>
+				<li class="page-item">
+					<a href="#">
+						<i class="iconfont icon-person1"></i>
+						<p>用工管理</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<script src="js/jquery-1.10.2.min.js"></script>
 	  <script type="text/javascript" src="js/basic.js"></script>	
       <script type="text/javascript" src="js/rem.js"></script>	
 	</body>
