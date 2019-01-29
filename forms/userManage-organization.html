@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+  <title>用户权限管理</title>
+	<script>
+		function changeKeeper(buttonid,keeperName1){
+			var tx = document.getElementById(buttonid);
+			if(tx.value == "改人") {
+				tx.value = "确定";
+			} else {
+				tx.value = "改人";
+
+			}
+			alert(tx.value);
+		}
+	</script>
+</head>
+
+<body>
+		<div class="header">
+			<span>用户权限管理</span>
+			<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
+		</div>
+		<div class="banner">
+			<img src="img/self-report.png">
+		</div>
+
+		<ul class="ask-box">
+			<!--
+			<li class="basic-tit">
+				用户列表
+				<span class="state-img"><img src="img/state.png"></span>
+				<span class="state"><a href="fuelCardRecive-organization.html">添加用户</a></span>
+			</li>
+			<li class="ask-item">
+				<a href="user-info-contact.html">
+
+					<span class="heade-img1">
+						<img src="img/timg.jpeg">
+					</span>
+					<span id="keeperName1">张三</span>
+					<span class="ask-word">个人信息</span>
+					<span class="goin"><i class="iconfont icon-right"></i></span>
+				</a>
+				<span>
+					<button><a href="fuelCardRechargeToCard.html">充卡</a></button><span>|</span>
+					<input type="button" value="改人" id="changeKeeperButton1" onclick=changeKeeper(id,"keeperName1")></inputbutton><span>|</span>
+					<button>删除</button>
+				</span>
+
+			</li>
+			<li class="ask-item nobor">
+				<a href="changepsw.html">
+					<i class="iconfont icon-changpsw"></i>
+					<span class="ask-word">修改密码</span>
+					<span class="goin"><i class="iconfont icon-right"></i></span>
+				</a>
+			</li>
+
+		</ul>
+
+		<div class="sign-out">
+			<a href="#">
+				<i class="iconfont icon-logout"></i>
+				<span>退出</span>
+			</a>
+		</div>
+		-->
+		<ul class="dorm-book mt3">
+		</ul>
+		<ul class="dorm-book mt3">
+			<li class="basic-tit">
+			    用户列表
+				<span class="state-img"><img src="img/state.png"></span>
+				<span class="state"><a href="userInfoAdd-organization.html">添加用户</a></span>
+			</li>
+			<li class="cost clearfix first">
+				<span>头像</span>
+				<span>姓名</span>
+				<span>管理操作</span>
+			</li>
+			<li class="cost clearfix">
+				<span class="heade-img1">
+					<img src="img/timg.jpeg">
+				</span>
+				<span id="keeperName1">张三</span>
+				<span>
+					<button><a href="javascript:alert('该用户将停用。')">停用</a></button><span>|</span>
+					<input type="button" value="修改" id="changeKeeperButton1" onclick="location.href='userInfoEdit-orgnization.html'")></inputbutton><span>|</span>
+					<button>设为管理员</button>
+				</span>
+			</li>
+			<li class="cost clearfix">
+				<span class="heade-img1">
+					<img src="img/timg.jpeg">
+				</span>
+				<span id="keeperName1">张三</span>
+				<span>
+					<button><a href="javascript:alert('该用户将停用。')">停用</a></button><span>|</span>
+					<input type="button" value="修改" id="changeKeeperButton1" onclick="location.href='userInfoEdit-orgnization.html'")></inputbutton><span>|</span>
+					<button>删除</button>
+				</span>
+			</li>
+			<li class="cost clearfix">
+				<span class="heade-img1">
+					<img src="img/timg.jpeg">
+				</span>
+				<span id="keeperName1">张三</span>
+				<span>
+					<button><a href="javascript:alert('该用户将停用。')">停用</a></button><span>|</span>
+					<input type="button" value="修改" id="changeKeeperButton1" onclick="location.href='userInfoEdit-orgnization.html'")></inputbutton><span>|</span>
+					<button>删除</button>
+				</span>
+			</li>
+		</ul>
+	  <script src="js/jquery-1.10.2.min.js"></script>
+	  <script type="text/javascript" src="js/basic.js"></script>	
+      <script type="text/javascript" src="js/rem.js"></script>	
+	</body>
+</html>

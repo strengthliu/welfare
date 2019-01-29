@@ -519,6 +519,15 @@ body{
     height: 1.4rem;
     position: relative;
 }
+.upload-head>span,.heade-img1{
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	position: relative;
+}
+.upload-head>span>img,.heade-img1>img{
+	width: 50%;
+}
 .upload-head>span>img,.heade-img>img{
 	width: 100%;
 }
