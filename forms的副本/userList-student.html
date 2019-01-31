@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="css/slick.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css" />
+		<title>预约面试</title>
+		<script>
+			var attribute = 0;
+			function setAttr(attr){
+				attribute = attr;
+				var attrEle = document.getElementById("userAttr");
+				switch(attr){
+					case 1:
+						attrEle.setAttribute("value","销售助理");
+						break;
+					case 2:
+						attrEle.setAttribute("value","行政文员");
+						break;
+					case 3:
+						attrEle.setAttribute("value","全部");
+						break;
+				}
+
+
+			}
+		</script>
+
+</head>
+	<body>
+			<div class="header">
+				<span>预约面试</span>
+				<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
+			</div>
+			<div class="banner">
+				<img src="img/self-report.png">
+			</div>
+			<div class="contain">
+				<ul class="dorm-book">
+				<li>
+					<div class="show-btn">
+						<span class="book-tit">预约岗位</span>
+						<input type="text" id="userAttr" name="name" placeholder="请选择您要岗位名称" disabled="disabled" />
+					</div>
+					<span class="goin"><i class="iconfont icon-right"></i></span>
+					<div id="attrSelectOption" class="checkshow">
+						<p onclick="setAttr(1)">销售助理</p>
+						<p onclick="setAttr(2)">行政文员</p>
+						<p onclick="setAttr(3)">全部</p>
+						<span class="close">关闭</span>
+					</div>
+				</li>
+				</ul>
+
+				<div class="myanswer-box">
+					<div class="delayReport">
+						<ul class="hd clearfix">
+						<li class="active">待约人员</li>
+						<li>已约人员</li>
+						</ul>
+					</div>
+					<div class="bd">
+						<div>
+							<ul class="myanswer">
+								<div  class="myanswer-box">
+									<a href="#">
+										<li class="info-top clearfix" onclick="location.href='userInfoView-student.html'">
+											<div>
+												<ul>
+													<li>
+														<span class="heade-img">
+															<img src="img/timg.jpeg">
+														</span>
+														<span class="stu-name">张三</span>
+														<span class="stu-name">贵州大学</span>
+														<span class="stu-name">本科,2019年毕业</span>
+													</li>
+													<li>
+														<span class="stu-name">1、英语4级。</span>
+														<span class="stu-name">2、年实习工作经验。......</span>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li onclick="location.href='messageChat.html'">
+											<span class="route-icon"><i class="iconfont icon-zixun"></i></span>
+											<span class="route-word">请问我可以明天去您那里送加油卡么？</span>
+											<span class="goin">2016-08-25</span>
+										</li>
+									</a>
+								</div>
+
+								<div  class="myanswer-box">
+								<li class="info-top clearfix">
+									<span class="heade-img">
+										<img src="img/timg.jpeg">
+									</span>
+									<span class="stu-name">往日时光</span>
+									<span class="code"><img src="img/code.png"></span>
+								</li>
+								<li onclick="location.href='messageChat.html'">
+									<span class="route-icon"><i class="iconfont icon-zixun"></i></span>
+									<span class="route-word">收到,谢谢!</span>
+									<span class="goin">2016-08-25</span>
+								</li>
+							</div>
+
+								<div>
+									<ul class="myanswer">
+										<div  class="myanswer-box">
+											<a href="#">
+												<li class="info-top clearfix" onclick="location.href='userInfoView-student.html'">
+													<div>
+														<ul>
+															<li>
+														<span class="heade-img">
+															<img src="img/timg.jpeg">
+														</span>
+																<span class="stu-name">李四</span>
+																<span class="stu-name">贵州大学</span>
+																<span class="stu-name">本科,2019年毕业</span>
+															</li>
+															<li>
+																<span class="stu-name">1、英语4级。</span>
+																<span class="stu-name">2、年实习工作经验。......</span>
+															</li>
+														</ul>
+													</div>
+												</li>
+												<li onclick="location.href='messageChat.html'">
+													<span class="route-icon"><i class="iconfont icon-zixun"></i></span>
+													<span class="route-word">请问我可以明天去您那里送加油卡么？</span>
+													<span class="goin">2016-08-25</span>
+												</li>
+											</a>
+										</div>
+
+										<div  class="myanswer-box">
+											<li class="info-top clearfix">
+									<span class="heade-img">
+										<img src="img/timg.jpeg">
+									</span>
+												<span class="stu-name">往日时光</span>
+												<span class="code"><img src="img/code.png"></span>
+											</li>
+											<li>
+												<span class="route-icon"><i class="iconfont icon-zixun"></i></span>
+												<span class="route-word">收到,谢谢!</span>
+												<span class="goin">2016-08-25</span>
+											</li>
+										</div>
+
+										<div  class="myanswer-box">
+											<a href="#">
+												<li class="info-top clearfix" onclick="location.href='userInfoView-student.html'">
+											<span class="heade-img">
+												<img src="img/timg.jpeg">
+											</span>
+													<span class="stu-name">往日时光</span>
+													fdsdsa
+													<!--span class="goin">2016-08-25</span-->
+												</li>
+												<li>
+													<span class="route-icon"><i class="iconfont icon-zixun"></i></span>
+													<span class="route-word">请问我可以明天去您那里送加油卡么？</span>
+													<span class="goin">2016-08-25</span>
+												</li>
+											</a>
+										</div>
+									</ul>
+								</div>
+								<div  class="myanswer-box">
+									<a href="#">
+										<li class="info-top clearfix" onclick="location.href='userInfoView-student.html'">
+											<span class="heade-img">
+												<img src="img/timg.jpeg">
+											</span>
+											<span class="stu-name">往日时光</span>
+											fdsdsa222
+											<!--span class="goin">2016-08-25</span-->
+										</li>
+										<li onclick="location.href='messageChat.html'">
+											<span class="route-icon"><i class="iconfont icon-zixun"></i></span>
+											<span class="route-word">请问我可以明天去您那里送加油卡么？</span>
+											<span class="goin">2016-08-25</span>
+										</li>
+									</a>
+							</div>
+							</ul>
+						</div>
+						<div>
+							<ul class="myanswer">
+								<div  class="myanswer-box">
+										<li class="info-top clearfix">
+											<span class="heade-img" onclick="location.href='userInfoView-student.html'">
+												<img src="img/timg.jpeg">
+											</span>
+											<span class="stu-name" onclick="location.href='userInfoView-student.html'">往日时光11</span>
+											<button onclick="location.href='meet-sheet.html'">填写见面表</button>
+											<!--span class="goin">2016-08-25</span-->
+										</li>
+										<li onclick="location.href='messageChat.html'">
+											<span class="route-icon"><i class="iconfont icon-zixun"></i></span>
+											<span class="route-word">请问我可以明天去您那里送加油卡么？</span>
+											<span class="goin">2016-08-25</span>
+										</li>
+								</div>
+								<div  class="myanswer-box">
+									<a href="#">
+										<li class="info-top clearfix" onclick="location.href='userInfoView-student.html'">
+											<span class="heade-img">
+												<img src="img/timg.jpeg">
+											</span>
+											<span class="stu-name">往日时光</span>
+											fdsdsa
+											<!--span class="goin">2016-08-25</span-->
+										</li>
+										<li>
+											<span class="route-icon"><i class="iconfont icon-zixun"></i></span>
+											<span class="route-word">请问我可以明天去您那里送加油卡么？</span>
+											<span class="goin">2016-08-25</span>
+										</li>
+									</a>
+								</div>
+							</ul>
+						</div>
+						<div>
+							<ul class="myanswer">
+								<div  class="myanswer-box">
+									<a href="#">
+										<li class="info-top clearfix" onclick="location.href='userInfoView-student.html'">
+											<div>
+												<ul>
+													<li>
+														<span class="heade-img">
+															<img src="img/timg.jpeg">
+														</span>
+														<span class="stu-name">张三</span>
+														<span class="stu-name">贵州大学</span>
+														<span class="stu-name">本科,2019年毕业</span>
+													</li>
+													<li>
+														<span class="stu-name">1、英语4级。</span>
+														<span class="stu-name">2、年实习工作经验。......</span>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<span class="route-icon"><i class="iconfont icon-zixun"></i></span>
+											<span class="route-word">请问我可以明天去您那里送加油卡么？</span>
+											<span class="goin">2016-08-25</span>
+										</li>
+									</a>
+								</div>
+
+								<div  class="myanswer-box">
+									<li class="info-top clearfix">
+									<span class="heade-img">
+										<img src="img/timg.jpeg">
+									</span>
+										<span class="stu-name">往日时光</span>
+										<span class="code"><img src="img/code.png"></span>
+									</li>
+									<li>
+										<span class="route-icon"><i class="iconfont icon-zixun"></i></span>
+										<span class="route-word">收到,谢谢!</span>
+										<span class="goin">2016-08-25</span>
+									</li>
+								</div>
+
+								<div  class="myanswer-box">
+									<a href="#">
+										<li class="info-top clearfix" onclick="location.href='userInfoView-student.html'">
+											<span class="heade-img">
+												<img src="img/timg.jpeg">
+											</span>
+											<span class="stu-name">往日时光</span>
+
+											<span class="goin">2016-08-25</span>
+										</li>
+										<li>
+											<span class="route-icon"><i class="iconfont icon-zixun"></i></span>
+											<span class="route-word">请问我可以明天去您那里送加油卡么？</span>
+											<span class="goin">2016-08-25</span>
+										</li>
+									</a>
+								</div>
+								<div  class="myanswer-box">
+									<a href="#">
+										<li class="info-top clearfix" onclick="location.href='userInfoView-student.html'">
+											<span class="heade-img">
+												<img src="img/timg.jpeg">
+											</span>
+											<span class="stu-name">往日时光</span>
+											fdsdsa
+											<!--span class="goin">2016-08-25</span-->
+										</li>
+										<li>
+											<span class="route-icon"><i class="iconfont icon-zixun"></i></span>
+											<span class="route-word">请问我可以明天去您那里送加油卡么？</span>
+											<span class="goin">2016-08-25</span>
+										</li>
+									</a>
+								</div>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="footer">
+				<ul class="footer-page clearfix">
+					<li class="page-item">
+						<a href="jobManage.html">
+							<i class="iconfont icon-index"></i>
+							<p>岗位管理</p>
+						</a>
+					</li>
+					<li class="page-item active">
+						<a href="userList-student.html">
+							<i class="iconfont icon-computer"></i>
+							<p>预约面试</p>
+						</a>
+					</li>
+					<li class="page-item">
+						<a href="messageList.html">
+							<i class="iconfont icon-ask"></i>
+							<p>消息及待办</p>
+						</a>
+					</li>
+					<li class="page-item">
+						<a href="workerManage.html">
+							<i class="iconfont icon-person1"></i>
+							<p>用工管理</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="cover-bg"></div>
+			<script src="js/jquery-1.10.2.min.js"></script>
+			<script type="text/javascript" src="js/basic.js"></script>
+			<script type="text/javascript" src="js/rem.js"></script>
+		</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+  <title>商业保险预存账户充值</title>
+		</head>
+	<body>
+		<div class="header">
+			<span>商业保险预存账户充值</span>
+			<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
+		</div>
+		<div class="banner">
+			<img src="img/self-report.png">
+		</div>
+
+		<div class="contain">
+			<ul class="dorm-book">
+				<li class="state-box">
+					<span class="book-tit">账户余额:</span>
+					<text>4900.00元</text>
+				</li>
+				<li class="state-box">
+					<span class="book-tit">充值金额</span>
+					<input type="text" name="name" placeholder="请输入您要充值的金额"/>
+					<span class="state-img"><img src="img/state.png" onclick="location.href='payRouteSelect.html'"></span>
+					<span class="state"><a href="payRouteSelect.html">确定充值</a></span>
+				</li>
+    	</ul>
+
+		</div>
+		<ul class="dorm-book mt3">
+		</ul>
+		<ul class="dorm-book mt3">
+			<li class="basic-tit">
+				充值记录
+			</li>
+			<li class="cost clearfix first">
+				<span>时间</span>
+				<span>金额</span>
+				<span>发票</span>
+			</li>
+			<li class="cost clearfix">
+				<span>2019.01.01 12:00:00</span>
+				<span>3000.00</span>
+				<span>发票已开</span>
+			</li>
+			<li class="cost clearfix">
+				<span>2019.01.01 12:00:00</span>
+				<span>3000.00</span>
+				<span><input type="submit" value="开发票" onclick="location.href='fuelCardInvoice.html'" /></span>
+			</li>
+		</ul>
+	  <script src="js/jquery-1.10.2.min.js"></script>
+	  <script type="text/javascript" src="js/basic.js"></script>	
+      <script type="text/javascript" src="js/rem.js"></script>	
+	</body>
+</html>

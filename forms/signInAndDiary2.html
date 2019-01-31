@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+		<title>站内工作</title>
+		<!-- H5页面窗口自动调整到设备宽度，并控制用户缩放页面 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!-- IOS中禁用将数字识别为电话号码/忽略Android平台中对邮箱地址的识别 -->
+		<meta name="format-detection" content="telephone=no, email=no" />
+
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="libs/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="libs/calendar_base.css" />
+		<link rel="stylesheet" type="text/css" href="css/showcase.css" />
+<script>
+	function getTime()
+	{
+		var now = new Date();
+		var year = now.getFullYear();       //年
+		var month = now.getMonth() + 1;     //月
+		var day = now.getDate();            //日
+		var hh = now.getHours();            //时
+		var mm = now.getMinutes();          //分
+		var clock = year + "年";
+		if(month < 10)
+			clock += "0";
+		clock += month + "月";
+		if(day < 10)
+			clock += "0";
+		clock += day + "日";
+
+		if(hh < 10)
+			clock += "0";
+
+		clock += hh + ":";
+		if (mm < 10) clock += '0';
+		clock += mm;
+		clock ="签到时间:"+clock;
+//			alert(clock);
+//		var attrEle = document.getElementById("curDate");
+//		if(attrEle==null) alert("get null");
+//		attrEle.innerText = "日期:"+clock;
+		return(clock);
+	}
+
+</script>
+	</head>
+
+	<body>
+	<div class="header">
+		<span>站内工作</span>
+		<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
+	</div>
+
+		<div class="mui-content">
+			<div class="em-journal-title">
+				<div class="em-per-block pre">
+					<span class="mui-icon mui-icon-arrowleft"></span>
+					<span>上一月</span>
+				</div>
+				<div class="em-per-block mid">
+					<span>...</span>
+				</div>
+				<div class="em-per-block next">
+					<span>下一月</span>
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+			</div>
+
+			<!--日历容器-->
+			<div id="calendar">
+
+			</div>
+		</div>
+
+		<!--返回今天-->
+		<div class="backToday">
+			返回今天
+		</div>
+	<ul class="dorm-book">
+		<li>
+			<span class="book-tit">待办事项</span>
+		</li>
+		<li class="upload-head ta-center">
+						<span>
+							<img src="img/signin.jpeg" onclick="alert('签到成功!'+getTime())">
+						</span>
+			<p>您今天还没有签到,请点击签到。</p>
+		</li>
+		<li class="upload-head ta-center">
+			<img src="img/img_success.png">
+			<p>您今天今天已经于上午8:32完成签到。</p>
+		</li>
+		<li class="upload-head ta-center">
+			<span>
+				<img src="img/diary.png" onclick="location.href='diaryNew.html'">
+			</span>
+			<p>您今天还没有写工作日记,现在就写。</p>
+		</li>
+		<li class="upload-head ta-center">
+						<span>
+							<img src="img/worksheep.png">
+						</span>
+			<p>您本月还没有上传站外工作情况自查表,点击上传。</p>
+		</li>
+		<li class="upload-head ta-center">
+				<!--span>
+					<img src="img/take-photo.png">
+					<input type="file" />
+				</span-->
+			<p>您近期还没有去送加油卡。</p>
+		</li>
+	</ul>
+		<script src="libs/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/calendar_base.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/calendar_showcase.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

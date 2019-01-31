@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+  <title>捐赠管理</title>
+	<script>
+		function changeKeeper(buttonid,keeperName1){
+			var tx = document.getElementById(buttonid);
+			if(tx.value == "改人") {
+				tx.value = "确定";
+			} else {
+				tx.value = "改人";
+
+			}
+			alert(tx.value);
+		}
+	</script>
+</head>
+
+<body>
+		<div class="header">
+			<span>捐赠管理</span>
+			<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
+		</div>
+		<div class="banner">
+			<img src="img/self-report.png">
+		</div>
+
+		<div class="contain">
+			<ul class="dorm-book">
+				<li class="state-box">
+					<span class="book-tit">公益积分:</span>
+					<text>4900分</text>
+					<span class="state-img"><img src="img/state.png"></span>
+					<span class="state"><a href="donate.html">我要捐赠</a></span>
+				</li>
+    	</ul>
+
+		</div>
+		<ul class="dorm-book mt3">
+		</ul>
+		<dl class="news">
+			<dt class="news-tit">捐赠记录</dt>
+			<dd class="news-content clearfix">
+				<div class="nc-left fl">
+					<li><span>限定捐赠</span></li>
+					<li><span>10万元</span></li>
+					<button><a href="donateInvoice.html">票据已开</a></button><span></span>
+				</div>
+				<div class="nc-right fr">
+					<a class="ncr-top">XXXX对王五等8名同学就业扶持捐赠10万元。
+					</a>
+					<span class="nc-time">2018-07-26</span>
+					<button><a href="donate.html">捐赠详情</a></button><span></span>
+					<button><a href="#">使用情况</a></button><span></span>
+				</div>
+				<div class="nc-right fr">
+				</div>
+			</dd>
+			<dd class="news-content clearfix">
+				<div class="nc-left fl">
+					<li><span>非限定捐赠</span></li>
+					<li><span>10万元</span></li>
+					<button><a href="donateInvoice.html">开票据</a></button><span></span>
+				</div>
+				<div class="nc-right fr">
+					<a class="ncr-top">
+					</a>
+					<span class="nc-time">2018-07-26</span>
+					<button><a href="donate.html">捐赠详情</a></button><span></span>
+					<button><a href="">使用情况</a></button><span></span>
+				</div>
+				<div class="nc-right fr">
+				</div>
+			</dd>
+			<dd class="news-content clearfix">
+				<div class="nc-left fl">
+					<img src="img/pic1.png">
+				</div>
+				<div class="nc-right fr">
+					<a class="ncr-top">物品捐赠
+					</a>
+					<span class="nc-time">2018-07-26</span>
+					<button><a href="donate.html">捐赠详情</a></button><span></span>
+					<button><a href="donateLogistics.html">未发货,立刻发货</a></button><span></span>
+				</div>
+			</dd>
+		</dl>
+	  <script src="js/jquery-1.10.2.min.js"></script>
+	  <script type="text/javascript" src="js/basic.js"></script>	
+      <script type="text/javascript" src="js/rem.js"></script>	
+	</body>
+</html>

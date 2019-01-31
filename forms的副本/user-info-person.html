@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+  <title>联系人信息</title>
+	<script>
+		var attribute = 0;
+		function setAttr(attr){
+			attribute = attr;
+			var attrEle = document.getElementById("userAttr");
+			switch(attr){
+				case 1:
+					attrEle.setAttribute("value","受援个人");
+					break;
+				case 2:
+					attrEle.setAttribute("value","公益个人");
+					break;
+				case 3:
+					attrEle.setAttribute("value","公益单位");
+					break;
+			}
+
+			var event = new MouseEvent('click', {
+				'view': window,
+				'bubbles': true,
+				'cancelable': true
+			});
+			event.initMouseEvent("click",true,true,document.defaultView,0,0,0,0,0,false,false,false,false,0,null);
+			attrEle.dispatchEvent(event);
+		}
+
+		function nextStep(){
+			if(attribute !=0)
+			switch(attribute){
+				case 1:
+					location.href='user-info-student.html';
+					break;
+				case 2:
+					location.href='user-info-person.html';
+					break;
+				case 3:
+					location.href='user-info-organization.html';
+					break;
+			}
+			else
+					alert("您还没有选择用户类别");
+
+		}
+	</script>
+		</head>
+	<body>
+		<div class="header">
+			<span>联系人信息</span>
+			<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
+		</div>
+		<!--div class="step">
+			<ul class="fs0">
+				<li>
+					<span class="step-icon passbg">1</span>
+					<p class="step-txt">类别信息</p>
+				</li>
+				<li>
+					<span class="step-icon passbg">2</span>
+					<p class="step-txt">协议信息</p>
+				</li>
+				<li>
+					<span class="step-icon passbg">3</span>
+					<p class="step-txt">开启援助</p>
+				</li>
+				<li>
+					<span class="step-icon passbg">4</span>
+					<p class="step-txt">用户信息</p>
+				</li>
+			</ul>
+    	<span class="pro-line"><img src="img/pro-line4.png"></span>
+		</div-->
+		<ul class="dorm-book">
+			<li class="upload-head ta-center">
+				<span>
+					<img src="img/take-photo.png">
+					<input type="file" />
+				</span>
+				<p>为方便大家认识您,请上传近期大头照片</p>
+			</li>
+			<li>
+			    <span class="book-tit">姓名</span>
+			    <input type="text" name="name" placeholder="请输入姓名" />
+			    <div class="sex">
+			    	<label class="sex-check">男</label>
+			    	<label>女</label>
+			    </div>
+			</li>
+			<li>
+				<span class="book-tit">联系邮箱</span>
+		        <input type="text" name="name" placeholder="请填写您的联系邮箱地址" />
+			</li>
+			<li>
+				<span class="book-tit">联系电话</span>
+				<input type="text" name="name" placeholder="请填写您的联系方式" />
+			</li>
+			<li>
+				<span class="book-tit">联系地址</span>
+				<input type="text" name="name" placeholder="您可以接收快递的地址" disabled="disabled"/>
+				<span class="goin"><i class="iconfont icon-right"></i></span>
+			</li>
+			<li>
+				<div class="show-btn">
+				<span class="book-tit">用户类别</span>
+		        <input type="text" id="userAttr" name="name" placeholder="请选择您要注册的用户类别" disabled="disabled" />
+		       </div>
+		        <span class="goin"><i class="iconfont icon-right"></i></span>
+		        <div id="attrSelectOption" class="checkshow">
+		        	<p class="checked" onclick="setAttr(1)">援助天使</p>
+		        	<p onclick="setAttr(2)">理事成员</p>
+		        	<p onclick="setAttr(3)">特别理事成员</p>
+		        </div>
+			</li>
+		</ul>
+		<div class="step-btn">
+			<a href="index-person.html" class="ta-center db">完成</a>
+		</div>
+  <script src="js/jquery-1.10.2.min.js"></script>
+   <script type="text/javascript" src="js/basic.js"></script>	
+  <script type="text/javascript" src="js/rem.js"></script>	
+	</body>
+</html>

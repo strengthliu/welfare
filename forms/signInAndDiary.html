@@ -1,0 +1,185 @@
+<!-- 
+        作者： 孙尊路
+        创建时间：2017-06-16 13:26:47
+        版本： [1.0, 2017/6/8]
+        版权： 江苏国泰新点软件有限公司
+        描述： 周历组件（可以使用，有时间去完善文档，如果有需求可以参考使用）
+-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+		<!-- H5页面窗口自动调整到设备宽度，并控制用户缩放页面 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!-- IOS中禁用将数字识别为电话号码/忽略Android平台中对邮箱地址的识别 -->
+		<meta name="format-detection" content="telephone=no, email=no" />
+
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/calendar_base_week.css" />
+		<title>签到和工作日记</title>
+
+	</head>
+
+	<body>
+	<div class="header">
+		<span>签到和工作日记</span>
+		<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
+	</div>
+		<!--刷新周历-->
+		<!--button type="button" class="mui-btn mui-btn-red mui-btn-block" id="refresh" style="background: #3c80e6;">刷新周历组件</button-->
+		<!--内容-->
+		<div class="mui-content">
+			<div class="em-journal-bg">
+				<!--顶部标题-->
+				<div class="em-journal-title">
+					<div class="em-per-block pre">
+						<span class="mui-icon mui-icon-arrowleft"></span>
+						<span>上一周</span>
+					</div>
+					<div class="em-per-block mid">
+						<span>2017-08</span>
+					</div>
+					<div class="em-per-block next">
+						<span>下一周</span>
+						<span class="mui-icon mui-icon-arrowright"></span>
+					</div>
+				</div>
+				<!--面板内容-->
+				<ul class="mui-table-view em-journal-pad" id="weekcalendar">
+
+				</ul>
+				<ul class="dorm-book">
+					<li class="upload-head ta-center">
+						<span>
+							<img src="img/signin.jpeg" onclick="alert('签到成功!')">
+
+						</span>
+						<p>您今天还不有签到,请点击签到。</p>
+					</li>
+					<li>
+						<span class="book-tit">工作日记</span>
+					</li>
+					<li class="upload-head ta-center">
+				<span>
+					<img src="img/take-photo.png">
+					<input type="file" />
+				</span>
+						<p>为方便大家认识您,请上传近期大头照片</p>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<!--当前日期模板-->
+		<script type="text/template" id="template">
+			<li class="mui-table-view-cell em-active" date="{{date_frame}}">
+				<a class="mui-navigate-right"><span class="week">{{week_frame}}</span><span class="day">{{month_frame}}月{{day_frame}}日</span><span class="status mui-hidden">零</span></a>
+			</li>
+		</script>
+		<!--非当前日期模板-->
+		<script type="text/template" id="template2">
+			<li class="mui-table-view-cell " date="{{date_frame}}">
+				<a class="mui-navigate-right"><span class="week">{{week_frame}}</span><span class="day">{{month_frame}}月{{day_frame}}日</span><span class="status mui-hidden">零</span></a>
+			</li>
+		</script>
+		<script src="css/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/calendar_base_week.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// 初始化
+			var weekcalendar = new CalendarWeek({
+				// 默认周历组件容器
+				container: "#weekcalendar",
+				// 上一周元素
+				pre: ".pre",
+				// 下一周元素
+				next: ".next",
+				// 开启滑动时间，切换周历
+				isSwipe: false,
+				template: function (value, currdate, key) {
+					// console.log(value.date_frame);
+					// 选中状态
+					if(value.date_frame == currdate) {
+						var template = document.getElementById("template").innerHTML.trim()
+					} else {
+						var template = document.getElementById("template2").innerHTML.trim()
+					}
+					return template;
+				},
+				// 业务数据改变
+				dataRequest: function (callback, _this, range) {
+					var from = range.from; //开始时间
+					var to = range.to; //结束时间
+					console.log("切换日期区间：" + JSON.stringify(range) + "用于刷新业务接口");
+					// 一次请求7条数据，对应7天日期
+					var data = [{
+						"title": "1",
+						"date1": "2018-08-08",
+					}, {
+						"title": "2",
+						"date1": "2018-08-09"
+					}, {
+						"title": "3",
+						"date1": "2018-08-08",
+					}, {
+						"title": "4",
+						"date1": "2018-08-09"
+					}, {
+						"title": "5",
+						"date1": "2018-08-08",
+					}, {
+						"title": "6",
+						"date1": "2018-08-09"
+					}, {
+						"title": "7",
+						"date1": "2018-08-08",
+					}];
+					callback(data || []);
+				},
+				"preEvent": function (month) {
+					console.log("上周：" + month);
+					setTitle(month);
+				},
+				"nextEvent": function (month) {
+					console.log("下周：" + month);
+					setTitle(month);
+
+				},
+				// 点击日期事件
+				"onItemClick": function (item) {
+					this.querySelector('.status').style.display = 'block';
+					console.log(item.date + " " + item.week);
+					setTitle(item.date);
+
+				},
+				"success": function (date, range) {
+					document.querySelector('.mid span').innerText = date;
+
+				},
+				isDebug: false
+			});
+			// 设置标题
+			var titleNode = document.querySelector('.mid span');
+
+			function setTitle(date) {
+				titleNode.innerText = date;
+			}
+			
+			// 外部刷新方法
+			document.querySelector('#refresh').addEventListener('tap',function () {
+			   weekcalendar.refresh();     
+			});
+			
+		</script>
+	</body>
+
+</html>

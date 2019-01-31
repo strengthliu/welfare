@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="css/slick.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css" />
+		<title>用户信息</title>
+		<script>
+			var attribute = 0;
+			function setAttr(attr){
+				attribute = attr;
+				var attrEle = document.getElementById("userAttr");
+				switch(attr){
+					case 1:
+						attrEle.setAttribute("value","加油卡充值");
+						break;
+					case 2:
+						attrEle.setAttribute("value","加油卡管理");
+						break;
+					case 3:
+						attrEle.setAttribute("value","签收加油卡");
+						break;
+					case 4:
+						attrEle.setAttribute("value","捐赠");
+						break;
+					case 5:
+						attrEle.setAttribute("value","岗位管理");
+						break;
+					case 6:
+						attrEle.setAttribute("value","面试");
+						break;
+					case 7:
+						attrEle.setAttribute("value","用工管理");
+						break;
+				}
+
+				var event = new MouseEvent('click', {
+					'view': window,
+					'bubbles': true,
+					'cancelable': true
+				});
+				event.initMouseEvent("click",true,true,document.defaultView,0,0,0,0,0,false,false,false,false,0,null);
+				attrEle.dispatchEvent(event);
+
+			}
+		</script>
+</head>
+	<body>
+			<div class="header">
+				<span>用户信息</span>
+				<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
+			</div>
+			<div class="banner">
+				<img src="img/self-report.png">
+			</div>
+			<div class="contain">
+				<ul class="dorm-book">
+					<li class="info-top clearfix">
+						<span class="heade-img">
+							<img src="img/timg.jpeg">
+						</span>
+						<span class="stu-name">往日时光</span>
+						<span class="code"><img src="img/code.png"></span>
+					</li>
+				</ul>
+				<div class="delayReport">
+					<ul class="dorm-book">
+						<li>
+							<div class="show-btn">
+								<span class="book-tit">用户类别</span>
+								<input type="text" id="userAttr" name="name" placeholder="请选择您要注册的用户类别" disabled="disabled" />
+							</div>
+							<span class="goin"><i class="iconfont icon-right"></i></span>
+							<div id="attrSelectOption" class="checkshow">
+								<p onclick="setAttr(1)">加油卡充值</p>
+								<p onclick="setAttr(2)">加油卡管理</p>
+								<p onclick="setAttr(3)">签收加油卡</p>
+								<p onclick="setAttr(4)">捐赠</p>
+								<p onclick="setAttr(5)">岗位管理</p>
+								<p onclick="setAttr(6)">面试</p>
+								<p onclick="setAttr(7)">用工管理</p>
+							</div>
+							<span class="state-img"><img src="img/state.png"></span>
+							<span class="state"><a href="fuelCardRecive-organization.html">添加权限</a></span>
+						</li>
+						<li class="basic-tit">
+							权限列表
+						</li>
+
+					</ul>
+					<div class="bd">
+						<div style="display: block;">
+							<ul class="dorm-book">
+								<li class="cost clearfix">
+									<span id="keeperName1">加油卡充值</span>
+									<span>
+										<button><a href="javascript:alert('该用户将停用。')">停用</a></button><span>|</span>
+										<button>删除</button>
+									</span>
+								</li>
+								<li class="cost clearfix">
+									<span id="keeperName1">加油卡管理</span>
+									<span>
+										<button><a href="javascript:alert('该用户将停用。')">停用</a></button><span>|</span>
+										<button>删除</button>
+									</span>
+								</li>
+								<li class="cost clearfix">
+									<span id="keeperName1">签收加油卡</span>
+									<span>
+										<button><a href="javascript:alert('该用户将停用。')">停用</a></button><span>|</span>
+										<button>删除</button>
+									</span>
+								</li>
+								<li class="cost clearfix">
+									<span id="keeperName1">岗位管理</span>
+									<span>
+										<button><a href="javascript:alert('该用户将停用。')">停用</a></button><span>|</span>
+										<button>删除</button>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="step-btn">
+					<a href="javascript:history.go(-1)" class="ta-center db">提交</a>
+			</div>
+			<div class="cover-bg"></div>
+			<script src="js/jquery-1.10.2.min.js"></script>
+			<script type="text/javascript" src="js/basic.js"></script>
+			<script type="text/javascript" src="js/rem.js"></script>
+		</body>
