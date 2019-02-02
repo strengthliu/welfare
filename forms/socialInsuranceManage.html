@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+  <title>社保及缴税管理</title>
+	<script>
+		function changeKeeper(buttonid,keeperName1){
+			var tx = document.getElementById(buttonid);
+			if(tx.value == "改人") {
+				tx.value = "确定";
+			} else {
+				tx.value = "改人";
+
+			}
+			alert(tx.value);
+		}
+	</script>
+</head>
+
+<body>
+		<div class="header">
+			<span>社保及缴税管理</span>
+			<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
+		</div>
+		<div class="banner">
+			<img src="img/self-report.png">
+		</div>
+
+		<div class="contain">
+			<ul class="dorm-book">
+				<li class="state-box">
+					<span class="book-tit">当前社保账户余额:</span>
+					<text color="red">1000.00元</text>
+					<span class="book-tit">本月预计缴费金额:</span>
+					<text>6000.00元</text>
+				</li>
+				<li class="state-box">
+					<span class="state-img"><img src="img/state.png"></span>
+					<span class="state"><a href="socialInsurancePayRecord.html">保险缴纳记录</a></span>
+					<span class="state-img"><img src="img/state.png"></span>
+					<span class="state"><a href="socialInsuranceRecharge.html">充值保险金账户</a></span>
+				</li>
+    	</ul>
+
+		</div>
+		<ul class="dorm-book mt3">
+		</ul>
+		<ul class="dorm-book mt3">
+			<li class="basic-tit">
+			    人员列表
+				<span class="state-img"><img src="img/state.png"></span>
+				<span class="state"><a href="socialInsuranceUserAdd-1.html">新增参保人员</a></span>
+
+			</li>
+
+			<li class="cost clearfix first">
+				<span>姓名</span>
+				<span>身份证号</span>
+				<span>管理操作</span>
+			</li>
+			<li class="cost clearfix">
+				<span onclick="location.href='jobInfoView-organization.html'">张三</span>
+				<span id="keeperName1">222222222222</span>
+				<span>
+					<!--div class="reportcard">
+						<a href="#" class="db ta-center">充卡</a>
+						<a href="#" class="db ta-center">充卡</a>
+						<a href="#" class="db ta-center">充卡</a>
+					</div-->
+					<button><a href="socialInsuranceUserAdd-2-2.html">修改</a></button><span>|</span>
+					<button>转出</button><span>|</span>
+					<button>停缴</button>
+				</span>
+			</li>
+			<li class="cost clearfix">
+				<span onclick="location.href='jobInfoView-organization.html'">张三</span>
+				<span id="keeperName1">222222222222</span>
+				<span>
+					<!--div class="reportcard">
+						<a href="#" class="db ta-center">充卡</a>
+						<a href="#" class="db ta-center">充卡</a>
+						<a href="#" class="db ta-center">充卡</a>
+					</div-->
+					<button><a href="socialInsuranceUserAdd-2-2.html">修改</a></button><span>|</span>
+					<button>转出</button><span>|</span>
+					<button>续缴</button>
+				</span>
+			</li>
+			<li class="cost clearfix">
+				<span onclick="location.href='jobInfoView-organization.html'">张三</span>
+				<span id="keeperName1">222222222222</span>
+				<span>
+					<!--div class="reportcard">
+						<a href="#" class="db ta-center">充卡</a>
+						<a href="#" class="db ta-center">充卡</a>
+						<a href="#" class="db ta-center">充卡</a>
+					</div-->
+					<button><a href="socialInsuranceUserAdd-2-2.html">修改</a></button><span>|</span>
+					<button>转出</button><span>|</span>
+					<button>续缴</button>
+				</span>
+			</li>
+		</ul>
+		<!--div class="footer">
+			<ul class="footer-page clearfix">
+				<li class="page-item active">
+					<a href="jobManage.html">
+						<i class="iconfont icon-index"></i>
+						<p>人员管理</p>
+					</a>
+				</li>
+				<li class="page-item">
+					<a href="userList-student.html">
+						<i class="iconfont icon-computer"></i>
+						<p>预约面试</p>
+					</a>
+				</li>
+				<li class="page-item">
+					<a href="messageList.html">
+						<i class="iconfont icon-ask"></i>
+						<p>消息及待办</p>
+					</a>
+				</li>
+				<li class="page-item">
+					<a href="workerManage.html">
+						<i class="iconfont icon-person1"></i>
+						<p>用工管理</p>
+					</a>
+				</li>
+			</ul>
+		</div-->
+
+		<script src="js/jquery-1.10.2.min.js"></script>
+	  <script type="text/javascript" src="js/basic.js"></script>	
+      <script type="text/javascript" src="js/rem.js"></script>	
+	</body>
+</html>
