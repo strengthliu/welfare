@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+  <title>新建帮扶产品</title>
+	<script>
+		var attribute = 0;
+		function setAttr(attr){
+			attribute = attr;
+			var attrEle = document.getElementById("userAttr");
+			switch(attr){
+				case 1:
+					attrEle.setAttribute("value","个人");
+					break;
+				case 2:
+					attrEle.setAttribute("value","公益个人");
+					break;
+				case 3:
+					attrEle.setAttribute("value","单位");
+					break;
+			}
+
+			var event = new MouseEvent('click', {
+				'view': window,
+				'bubbles': true,
+				'cancelable': true
+			});
+			event.initMouseEvent("click",true,true,document.defaultView,0,0,0,0,0,false,false,false,false,0,null);
+			attrEle.dispatchEvent(event);
+
+		}
+
+		function search(){
+			var event = new MouseEvent('click', {
+				'view': window,
+				'bubbles': true,
+				'cancelable': true
+			});
+			event.initMouseEvent("click",true,true,document.defaultView,0,0,0,0,0,false,false,false,false,0,null);
+			attrEle.dispatchEvent(event);
+
+		}
+		function nextStep(){
+			if(attribute !=0)
+				switch(attribute){
+					case 1:
+						location.href='tradeNewProduct-2.html?userAttr=1';
+						break;
+					case 2:
+						location.href='tradeNewProduct-2.html?userAttr=2';
+						break;
+				}
+			else
+				alert("您还没有选择用户类别");
+		}
+
+
+	</script>
+		</head>
+	<body>
+		<div class="header">
+			<span>新建帮扶产品</span>
+			<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
+		</div>
+		<div class="step">
+			<ul class="fs0">
+				<li>
+					<span class="step-icon passbg">1</span>
+					<p class="step-txt">供给类型</p>
+				</li>
+				<li>
+					<span class="step-icon">2</span>
+					<p>协议信息</p>
+				</li>
+				<li>
+					<span class="step-icon">3</span>
+					<p>产品信息</p>
+				</li>
+				<li>
+					<span class="step-icon">4</span>
+					<p>价格及数量</p>
+				</li>
+			</ul>
+			<span class="pro-line"><img src="img/pro-line4.png"></span>
+		</div>
+		<ul class="dorm-book">
+			<li>
+				<div class="show-btn">
+					<span class="book-tit">帮扶类型</span>
+					<input type="text" id="userAttr" name="name" placeholder="请选择您提供帮扶产品的类别" disabled="disabled" />
+				</div>
+				<span class="goin"><i class="iconfont icon-right"></i></span>
+				<div id="attrSelectOption" class="checkshow">
+					<p onclick="setAttr(2)">简单产品(项目)帮扶</p>
+					<p onclick="setAttr(2)">复杂产品(项目)帮扶</p>
+					<p onclick="setAttr(2)">特殊产品(项目)帮扶</p>
+				</div>
+			</li>
+			<!DOCTYPE html>
+			<html lang="zh-CN">
+			<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+				<meta name="description" content="">
+				<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+				<link rel="stylesheet" type="text/css" href="css/base.css"/>
+				<link rel="stylesheet" type="text/css" href="css/style.css"/>
+				<link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+				<title>新建帮扶产品</title>
+				<script>
+					var attribute = 0,attribute1 = 0;
+					var sfzh=0;
+					function setAttr(attr){
+						attribute = attr;
+						var attrEle = document.getElementById("userAttr");
+						switch(attr){
+							case 1:
+								attrEle.setAttribute("value","捐赠");
+								break;
+							case 2:
+								attrEle.setAttribute("value","产品(项目)帮扶");
+								break;
+							case 3:
+								attribute1 = attr;
+								attrEle = document.getElementById("userAttr1");
+								attrEle.setAttribute("value","简单产品(项目)帮扶");
+								break;
+							case 4:
+								attribute1 = attr;
+								attrEle = document.getElementById("userAttr1");
+								attrEle.setAttribute("value","复杂产品(项目)帮扶");
+								break;
+							case 5:
+								attribute1 = attr;
+								attrEle = document.getElementById("userAttr1");
+								attrEle.setAttribute("value","特殊产品(项目)帮扶");
+								break;
+						}
+
+						var event = new MouseEvent('click', {
+							'view': window,
+							'bubbles': true,
+							'cancelable': true
+						});
+						event.initMouseEvent("click",true,true,document.defaultView,0,0,0,0,0,false,false,false,false,0,null);
+						attrEle.dispatchEvent(event);
+
+					}
+
+					function setSfzh(){
+						var attrEle = document.getElementById("sfzh");
+						attrEle.value="张三 2222222222222";
+					}
+					function search(){
+						sfzh=1;
+						var event = new MouseEvent('click', {
+							'view': window,
+							'bubbles': true,
+							'cancelable': true
+						});
+						event.initMouseEvent("click",true,true,document.defaultView,0,0,0,0,0,false,false,false,false,0,null);
+						attrEle.dispatchEvent(event);
+					}
+
+					function nextStep(){
+						if(attribute ==0) {alert("您还没有选择供给类别");return;}
+						if(attribute1 ==0) {alert("您还没有选择帮扶产品类别");return;}
+						if(sfzh==0){alert("您还没有确定受援人员.");return;}
+
+						switch (attribute) {
+							case 1:
+								location.href = 'tradeNewProduct-2.html?userAttr=1';
+								break;
+							case 2:
+								location.href = 'tradeNewProduct-2.html?userAttr=2';
+								break;
+							default:
+								location.href = 'tradeNewProduct-2.html?userAttr=2';
+								break;
+						}
+						switch (attribute) {
+							case 1:
+								location.href = 'tradeNewProduct-2.html?userAttr=1';
+								break;
+							case 2:
+								location.href = 'tradeNewProduct-2.html?userAttr=2';
+								break;
+							default:
+								location.href = 'tradeNewProduct-2.html?userAttr=2';
+								break;
+						}
+//			var attrEle = document.getElementById("sfzh");
+//			alter(attrEle.value);
+					}
+
+
+				</script>
+			</head>
+			<body>
+			<div class="header">
+				<span>新建帮扶产品</span>
+				<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
+			</div>
+			<div class="step">
+				<ul class="fs0">
+					<li>
+						<span class="step-icon passbg">1</span>
+						<p class="step-txt">供给类型</p>
+					</li>
+					<li>
+						<span class="step-icon">2</span>
+						<p>协议信息</p>
+					</li>
+					<li>
+						<span class="step-icon">3</span>
+						<p>产品信息</p>
+					</li>
+					<li>
+						<span class="step-icon">4</span>
+						<p>价格及数量</p>
+					</li>
+				</ul>
+				<span class="pro-line"><img src="img/pro-line4.png"></span>
+			</div>
+			<ul class="dorm-book">
+				<li>
+					<div class="show-btn">
+						<span class="book-tit">供给类型</span>
+						<input type="text" id="userAttr" name="name" placeholder="请选择您提供帮扶产品的供给类型" disabled="disabled" />
+					</div>
+					<span class="goin"><i class="iconfont icon-right"></i></span>
+					<div id="attrSelectOption" class="checkshow">
+						<p onclick="setAttr(1)">捐赠</p>
+						<p onclick="setAttr(2)">产品(项目)帮扶</p>
+					</div>
+				</li>
+				<li>
+					<div class="show-btn">
+						<span class="book-tit">产品类别</span>
+						<input type="text" id="userAttr1" name="name" placeholder="请选择您提供帮扶产品的类别" disabled="disabled" />
+					</div>
+					<span class="goin"><i class="iconfont icon-right"></i></span>
+					<div id="attrSelectOption" class="checkshow">
+						<p onclick="setAttr(3)">简单产品(项目)帮扶</p>
+						<p onclick="setAttr(4)">复杂产品(项目)帮扶</p>
+						<p onclick="setAttr(5)">特殊产品(项目)帮扶</p>
+					</div>
+				</li>
+				<li>
+					<span class="book-tit">受援人员</span>
+					<input id="sfzh" type="text" placeholder="请填写身份证号"/>
+					<div class="show-btn">
+						<div class="sex">
+							<span class="state-img"><img src="img/state.png"></span>
+							<span class="state"><a href="javascript:search()">搜索</a></span>
+						</div>
+					</div>
+					<div class="checkshow">
+						<h4 class="ta-center">受援人员</h4>
+						<p class="checked">
+						<p class="checked">张三<p>
+						<ul class="dorm-book mt3">
+							<!--li class="basic-tit">
+                                注册成功!现在就可以开启您的援助之旅!
+                            </li-->
+
+							<li class="info-top clearfix">
+				<span class="heade-img">
+					<img src="img/timg.jpeg">
+				</span>
+								<span class="stu-name">往日时光 身份证号:2222222222222222</span>
+								<span class="code"><img src="img/code.png"></span>
+							</li>
+
+						</ul>
+						</p>
+						<!--p class="checked">事假</p>
+                        <p>病假</p>
+                        <p>服兵役</p-->
+						<span class="close" onclick="setSfzh()">确定</span>
+					</div>
+				</li>
+
+				<!--li class="info-top clearfix">
+                    <span>推荐人: </span>
+                    <span class="heade-img">
+                        <img src="img/person.png">
+                    </span>
+                    <span class="stu-name">江静静</span>
+                    <span class="code"><img src="img/code.png"></span>
+                </li-->
+			</ul>
+			<div class="step-btn">
+				<a href="#" id="nextStepButton" class="ta-center db" onClick="nextStep();">下一步</a>
+			</div>
+			<script src="js/jquery-1.10.2.min.js"></script>
+			<script type="text/javascript" src="js/basic.js"></script>
+			<script type="text/javascript" src="js/rem.js"></script>
+			</body>
+			</html>
+
+			<!--li class="info-top clearfix">
+				<span>推荐人: </span>
+				<span class="heade-img">
+					<img src="img/person.png">
+				</span>
+				<span class="stu-name">江静静</span>
+				<span class="code"><img src="img/code.png"></span>
+			</li-->
+		</ul>
+		<div class="step-btn">
+			<a href="#" id="nextStepButton" class="ta-center db" onClick="nextStep();">下一步</a>
+		</div>
+  <script src="js/jquery-1.10.2.min.js"></script>
+   <script type="text/javascript" src="js/basic.js"></script>	
+  <script type="text/javascript" src="js/rem.js"></script>	
+	</body>
+</html>
