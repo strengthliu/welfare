@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/base.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
-  <title>社保及缴税管理</title>
+  <title>车辆保险管理</title>
 	<script>
 		function changeKeeper(buttonid,keeperName1){
 			var tx = document.getElementById(buttonid);
@@ -16,7 +16,6 @@
 				tx.value = "确定";
 			} else {
 				tx.value = "改人";
-
 			}
 			alert(tx.value);
 		}
@@ -25,7 +24,7 @@
 
 <body>
 		<div class="header">
-			<span>社保及缴税管理</span>
+			<span>车辆保险管理</span>
 			<a href="javascript:history.go(-1)" class="back"><i class="iconfont icon-left"></i></a>
 		</div>
 		<div class="banner">
@@ -33,12 +32,10 @@
 		</div>
 
 		<div class="contain">
-			<ul class="dorm-book">
+			<!--ul class="dorm-book">
 				<li class="state-box">
-					<span class="book-tit">当前社保账户余额:</span>
+					<span class="book-tit">当前车保账户余额:</span>
 					<text color="red">1000.00元</text>
-					<span class="book-tit">本月预计缴费金额:</span>
-					<text>6000.00元</text>
 				</li>
 				<li class="state-box">
 					<span class="state-img"><img src="img/state.png"></span>
@@ -46,95 +43,53 @@
 					<span class="state-img"><img src="img/state.png"></span>
 					<span class="state"><a href="insuranceSocialRecharge.html">充值保险金账户</a></span>
 				</li>
-    	</ul>
+    	</ul-->
 
 		</div>
 		<ul class="dorm-book mt3">
 		</ul>
 		<ul class="dorm-book mt3">
 			<li class="basic-tit">
-			    人员列表
+			    车辆保险列表
 				<span class="state-img"><img src="img/state.png"></span>
-				<span class="state"><a href="insuranceSocialUserAdd-1.html">新增参保人员</a></span>
+				<span class="state"><a href="insuranceCarAdd-1.html">新上车辆保险</a></span>
 
 			</li>
 
 			<li class="cost clearfix first">
-				<span>姓名</span>
-				<span>身份证号</span>
-				<span>管理操作</span>
+				<span>车牌号</span>
+				<span>险种</span>
+				<span>时间</span>
 			</li>
 			<li class="cost clearfix">
-				<span onclick="location.href='jobInfoView-organization.html'">张三</span>
-				<span id="keeperName1">222222222222</span>
+				<span onclick="location.href='jobInfoView-organization.html'">京A12345</span>
 				<span>
-					<!--div class="reportcard">
-						<a href="#" class="db ta-center">充卡</a>
-						<a href="#" class="db ta-center">充卡</a>
-						<a href="#" class="db ta-center">充卡</a>
-					</div-->
-					<button><a href="insuranceSocialUserAdd-2-2.html">修改</a></button><span>|</span>
-					<button>转出</button><span>|</span>
-					<button>停缴</button>
+				<button><a href="insuranceSocialUserAdd-2-2.html">交强险</a></button>
+					</span>
+				<span>
+					<button>2019.1.1</button><span>-</span>
+					<button>2010.1.1</button>
 				</span>
 			</li>
 			<li class="cost clearfix">
-				<span onclick="location.href='jobInfoView-organization.html'">张三</span>
-				<span id="keeperName1">222222222222</span>
+				<span onclick="location.href='jobInfoView-organization.html'">京A12345</span>
 				<span>
-					<!--div class="reportcard">
-						<a href="#" class="db ta-center">充卡</a>
-						<a href="#" class="db ta-center">充卡</a>
-						<a href="#" class="db ta-center">充卡</a>
-					</div-->
-					<button><a href="insuranceSocialUserAdd-2-2.html">修改</a></button><span>|</span>
-					<button>转出</button><span>|</span>
-					<button>续缴</button>
+				<button><a href="insuranceSocialUserAdd-2-2.html">盗抢险</a></button>
+					</span>
+				<span>
+					<button>待支付</button>
 				</span>
 			</li>
 			<li class="cost clearfix">
-				<span onclick="location.href='jobInfoView-organization.html'">张三</span>
-				<span id="keeperName1">222222222222</span>
+				<span onclick="location.href='jobInfoView-organization.html'">京C12345</span>
 				<span>
-					<!--div class="reportcard">
-						<a href="#" class="db ta-center">充卡</a>
-						<a href="#" class="db ta-center">充卡</a>
-						<a href="#" class="db ta-center">充卡</a>
-					</div-->
-					<button><a href="insuranceSocialUserAdd-2-2.html">修改</a></button><span>|</span>
-					<button>转出</button><span>|</span>
-					<button>续缴</button>
+				<button>交强险</button>
+					</span>
+				<span>
+					<button>办理中</button>
 				</span>
 			</li>
 		</ul>
-		<!--div class="footer">
-			<ul class="footer-page clearfix">
-				<li class="page-item active">
-					<a href="jobManage.html">
-						<i class="iconfont icon-index"></i>
-						<p>人员管理</p>
-					</a>
-				</li>
-				<li class="page-item">
-					<a href="userList-student.html">
-						<i class="iconfont icon-computer"></i>
-						<p>预约面试</p>
-					</a>
-				</li>
-				<li class="page-item">
-					<a href="messageList.html">
-						<i class="iconfont icon-ask"></i>
-						<p>消息及待办</p>
-					</a>
-				</li>
-				<li class="page-item">
-					<a href="workerManage.html">
-						<i class="iconfont icon-person1"></i>
-						<p>用工管理</p>
-					</a>
-				</li>
-			</ul>
-		</div-->
 
 		<script src="js/jquery-1.10.2.min.js"></script>
 	  <script type="text/javascript" src="js/basic.js"></script>	
